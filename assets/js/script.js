@@ -46,3 +46,27 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+
+
+
+/**
+ * contact form -> mailto
+ */
+
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = this.elements["name"].value.trim();
+    const email = this.elements["email"].value.trim();
+    const message = this.elements["message"].value.trim();
+
+    const subject = encodeURIComponent("Portfolio message from " + name);
+    const body = encodeURIComponent(message + "\n\nFrom: " + name + " <" + email + ">");
+
+    window.location.href = "mailto:Marvilynlion@gmail.com?subject=" + subject + "&body=" + body;
+  });
+}

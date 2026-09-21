@@ -572,53 +572,7 @@ textarea.contact-input {
 
 
 
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
 
-.blog { padding-block-end: 120px; }
-
-.blog .section-title { margin-block-end: 20px; }
-
-.blog .section-text { margin-block-end: 80px; }
-
-.blog-list {
-  display: grid;
-  gap: 40px;
-}
-
-.blog-card { font-family: var(--ff-barlow); }
-
-.blog-card .card-banner {
-  background-color: var(--independence);
-  border-radius: var(--radius-15);
-  overflow: hidden;
-  margin-block-end: 20px;
-}
-
-.blog-card .card-banner img { transition: var(--transition-2); }
-
-.blog-card .card-banner a:is(:hover, :focus) img { transform: scale(1.1); }
-
-.blog-card .card-banner:focus-within {
-  outline: 2px solid var(--white);
-  outline-offset: 4px;
-}
-
-.blog-card .card-tag {
-  color: var(--orange-soda);
-  margin-block-end: 5px;
-}
-
-.blog-card .card-title {
-  color: var(--white);
-  font-weight: var(--fw-600);
-  line-height: 1.3;
-}
-
-.blog-card .card-title a { transition: var(--transition-2); }
-
-.blog-card .card-title a:is(:hover, :focus) { color: var(--orange-soda); }
 
 
 
@@ -746,8 +700,7 @@ textarea.contact-input {
    * SKILLS, BLOG
    */
 
-  .skills-list,
-  .blog-list {
+  .skills-list {
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
   }
@@ -1028,19 +981,6 @@ textarea.contact-input {
   .contact-icon { padding: 30px; }
 
 
-
-  /**
-   * BLOG
-   */
-
-  .blog { padding-block-end: 180px; }
-
-  .blog-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-  }
-
-  
 
   /**
    * FOOTER
