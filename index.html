@@ -7,7 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marvilyn Calibuso - IT Support &amp; Web Developer</title>
   <meta name="description"
-    content="Personal portfolio of Marvilyn Calibuso - IT support and web development professional in Bauang, La Union, Philippines.">
+    content="Portfolio of Marvilyn Calibuso - IT support and web development professional in Bauang, La Union, Philippines. Projects, skills, certifications, and contact.">
+
+  <!-- 
+    - open graph / share preview
+  -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marvilyn Calibuso - IT Support &amp; Web Developer">
+  <meta property="og:description"
+    content="IT support and web development professional in Bauang, La Union, Philippines. Projects, skills, certifications, and contact.">
+  <meta property="og:url" content="https://clasver.github.io/Portfolio/">
+  <meta property="og:image" content="https://clasver.github.io/Portfolio/assets/images/hero-banner.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#201d33">
 
   <!-- 
     - favicon
@@ -25,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 </head>
 
@@ -38,8 +50,8 @@
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#">
-        <h1 class="logo">Marvilyn Calibuso</h1>
+      <a href="#home">
+        <h1 class="logo">Marvilyn<span class="logo-dot">.</span></h1>
       </a>
 
       <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
@@ -51,7 +63,7 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            <a href="#home" class="navbar-link active" data-nav-link>Home</a>
           </li>
 
           <li>
@@ -59,7 +71,7 @@
           </li>
 
           <li>
-            <a href="#portfolio" class="navbar-link" data-nav-link>Portfolio</a>
+            <a href="#portfolio" class="navbar-link" data-nav-link>Projects</a>
           </li>
 
           <li>
@@ -94,9 +106,11 @@
       <section class="hero" id="home">
         <div class="container">
 
-          <div class="hero-banner">
+          <div class="hero-banner" data-reveal>
 
-            <img src="./assets/images/hero-banner.jpg" width="800" height="864" loading="lazy"
+            <div class="hero-glow" aria-hidden="true"></div>
+
+            <img src="./assets/images/hero-banner.jpg" width="800" height="864" loading="eager"
               alt="Marvilyn Calibuso's Photo" class="img-cover">
 
             <div class="elem elem-1">
@@ -115,32 +129,35 @@
               <ion-icon name="trophy"></ion-icon>
             </div>
 
-            <img src="./assets/images/rotate-img.png" width="169" height="172"
-              alt="I'm IT professional from Bauang, La Union" class="rotate-img">
-
           </div>
 
-          <div class="hero-content">
+          <div class="hero-content" data-reveal>
+
+            <p class="hero-eyebrow">Hello, I'm</p>
 
             <h2 class="hero-title">
-              <span>Hello I'm</span>
-              <strong>Marvilyn Calibuso</strong> IT Support &amp; Web Developer
+              <span class="hero-name">Marvilyn Calibuso</span>
+              <span class="hero-role">IT Support &amp; Web Developer</span>
             </h2>
 
             <p class="hero-text">
-              IT support and web development professional from Bauang, La Union. I troubleshoot hardware and software,
-              keep networks running, and build with WordPress, Wix, and code.
+              I troubleshoot hardware and software, keep networks running, and build with WordPress, Wix, and code —
+              from Bauang, La Union to wherever the work takes me.
             </p>
 
             <div class="btn-group">
               <a href="#contact" class="btn btn-primary blue">Hire Me</a>
 
-              <a href="#about" class="btn">About Me</a>
+              <a href="#about" class="btn btn-outline">About Me</a>
             </div>
 
           </div>
 
         </div>
+
+        <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </a>
       </section>
 
 
@@ -154,7 +171,7 @@
       <section class="section about" id="about">
         <div class="container">
 
-          <figure class="about-banner">
+          <figure class="about-banner" data-reveal>
 
             <img src="./assets/images/about-banner.jpg" width="800" height="652" loading="lazy"
               alt="Marvilyn Calibuso's Photo" class="img-cover">
@@ -176,7 +193,7 @@
 
           </figure>
 
-          <div class="about-content">
+          <div class="about-content" data-reveal>
 
             <p class="section-subtitle">I'm an IT Professional</p>
 
@@ -194,8 +211,93 @@
               fluent in English, Iloco, and Tagalog.
             </p>
 
-            <a href="#portfolio" class="btn btn-primary blue">View Portfolio</a>
+            <div class="language-row" aria-label="Languages">
+              <span class="language-tag">Iloco <em>native</em></span>
+              <span class="language-tag">Tagalog <em>native</em></span>
+              <span class="language-tag">English <em>very good</em></span>
+            </div>
 
+            <a href="#portfolio" class="btn btn-primary blue">View My Projects</a>
+
+          </div>
+
+        </div>
+
+        <div class="container about-extra">
+
+          <div class="cert-block" data-reveal>
+            <h3 class="h3 cert-title">National Certifications</h3>
+
+            <ul class="cert-list">
+              <li>Web Development <strong>NC III</strong></li>
+              <li>Computer System Servicing <strong>NC II</strong></li>
+              <li>EPAS <strong>NC II</strong></li>
+            </ul>
+          </div>
+
+          <div class="timeline" data-reveal>
+            <h3 class="h3 timeline-title">Career Timeline</h3>
+
+            <ol class="timeline-list">
+
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+
+                <div class="timeline-card">
+                  <p class="timeline-period">Apr 2026</p>
+                  <h4 class="timeline-role">Content &amp; Website Operations Assistant</h4>
+                  <p class="timeline-org">Goodmedia</p>
+                  <p class="timeline-desc">WordPress and Wix management, SEO keyword research, content publishing, and
+                    workflow support for digital operations.</p>
+                </div>
+              </li>
+
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+
+                <div class="timeline-card">
+                  <p class="timeline-period">Jun 2024 – Sep 2026</p>
+                  <h4 class="timeline-role">IT Support / Data Encoder</h4>
+                  <p class="timeline-org">Napintas Logistics &amp; Distribution Inc.</p>
+                  <p class="timeline-desc">Technical support, accurate data encoding, and maintenance of company
+                    databases and reports.</p>
+                </div>
+              </li>
+
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+
+                <div class="timeline-card">
+                  <h4 class="timeline-role">Web Developer / IT Technician</h4>
+                  <p class="timeline-org">CleverWorkOU</p>
+                  <p class="timeline-desc">Built Kotlin scripts and automation tools that streamlined data migration;
+                    provided hardware, software, and network support.</p>
+                </div>
+              </li>
+
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+
+                <div class="timeline-card">
+                  <h4 class="timeline-role">IT Support</h4>
+                  <p class="timeline-org">Municipal Police Station of Bauang, La Union</p>
+                  <p class="timeline-desc">Managed and maintained IT infrastructure — servers, workstations, and
+                    peripherals — keeping operations online.</p>
+                </div>
+              </li>
+
+              <li class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+
+                <div class="timeline-card">
+                  <h4 class="timeline-role">IT Support</h4>
+                  <p class="timeline-org">MSWDO – Bauang GIP</p>
+                  <p class="timeline-desc">Remote troubleshooting via AnyDesk, spreadsheet management, data backups, and
+                    smooth daily system operations.</p>
+                </div>
+              </li>
+
+            </ol>
           </div>
 
         </div>
@@ -206,7 +308,7 @@
 
 
       <!-- 
-        - #PORTFOLIO
+        - #PORTFOLIO / PROJECTS
       -->
 
       <section class="section portfolio" id="portfolio">
@@ -214,85 +316,171 @@
 
           <p class="section-subtitle">Portfolio</p>
 
-          <h2 class="h2 section-title">My Amazing Works</h2>
+          <h2 class="h2 section-title">My Recent Work</h2>
 
           <p class="section-text">
-            The organizations I've supported - from private logistics to local government units, keeping their systems
-            running and their people working.
+            Projects and operations shaped by real work — automation, data, web, and support across the organizations
+            I've served.
           </p>
+
+          <div class="filter-bar" role="group" aria-label="Filter projects by category">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="web">Web &amp; Content</button>
+            <button class="filter-btn" type="button" data-filter="data">Data &amp; Automation</button>
+            <button class="filter-btn" type="button" data-filter="support">IT Support</button>
+          </div>
 
           <ul class="portfolio-list">
 
-            <li>
-              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-1.jpg')">
-                <div class="card-content">
+            <li class="portfolio-item" data-category="data" data-reveal>
+              <article class="project-card">
 
-                  <p class="card-subtitle">Napintas Logistics &amp; Distribution Inc.</p>
-
-                  <h3 class="h3 card-title">IT Support / Data Encoder</h3>
-
-                  <span class="btn-link">
-                    <span>View Project</span>
-
-                    <ion-icon name="arrow-forward"></ion-icon>
-                  </span>
-
+                <div class="project-thumb" aria-hidden="true">
+                  <ion-icon name="terminal-outline"></ion-icon>
                 </div>
-              </a>
+
+                <div class="project-body">
+                  <p class="project-org">CleverWorkOU</p>
+
+                  <h3 class="h3 project-title">Data Migration Automation Toolkit</h3>
+
+                  <p class="project-desc">Developed Kotlin scripts and automation tools that streamlined a large data
+                    migration — replacing error-prone manual steps with repeatable, version-controlled routines.</p>
+
+                  <ul class="project-tags">
+                    <li>Kotlin</li>
+                    <li>Scripting</li>
+                    <li>Automation</li>
+                  </ul>
+                </div>
+
+              </article>
             </li>
 
-            <li>
-              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-2.jpg')">
-                <div class="card-content">
+            <li class="portfolio-item" data-category="data" data-reveal>
+              <article class="project-card">
 
-                  <p class="card-subtitle">CleverWorkOU</p>
-
-                  <h3 class="h3 card-title">Web Developer / IT Technician</h3>
-
-                  <span class="btn-link">
-                    <span>View Project</span>
-
-                    <ion-icon name="arrow-forward"></ion-icon>
-                  </span>
-
+                <div class="project-thumb" aria-hidden="true">
+                  <ion-icon name="stats-chart-outline"></ion-icon>
                 </div>
-              </a>
+
+                <div class="project-body">
+                  <p class="project-org">Napintas Logistics &amp; Distribution Inc.</p>
+
+                  <h3 class="h3 project-title">Logistics Data &amp; Reporting Operations</h3>
+
+                  <p class="project-desc">Kept logistics databases accurate and reports current through disciplined
+                    data encoding, validation, and maintenance across daily operations.</p>
+
+                  <ul class="project-tags">
+                    <li>Data Entry</li>
+                    <li>Databases</li>
+                    <li>Reporting</li>
+                  </ul>
+                </div>
+
+              </article>
             </li>
 
-            <li>
-              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-3.jpg')">
-                <div class="card-content">
+            <li class="portfolio-item" data-category="support" data-reveal>
+              <article class="project-card">
 
-                  <p class="card-subtitle">MSWDO - Bauang GIP</p>
-
-                  <h3 class="h3 card-title">IT Support</h3>
-
-                  <span class="btn-link">
-                    <span>View Project</span>
-
-                    <ion-icon name="arrow-forward"></ion-icon>
-                  </span>
-
+                <div class="project-thumb" aria-hidden="true">
+                  <ion-icon name="desktop-outline"></ion-icon>
                 </div>
-              </a>
+
+                <div class="project-body">
+                  <p class="project-org">MSWDO – Bauang GIP</p>
+
+                  <h3 class="h3 project-title">Remote Support &amp; Recovery Operations</h3>
+
+                  <p class="project-desc">Delivered remote troubleshooting through AnyDesk, managed spreadsheets and
+                    data backups, and kept daily operations running with strong attention to detail.</p>
+
+                  <ul class="project-tags">
+                    <li>AnyDesk</li>
+                    <li>Backups</li>
+                    <li>Troubleshooting</li>
+                  </ul>
+                </div>
+
+              </article>
             </li>
 
-            <li>
-              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-4.jpg')">
-                <div class="card-content">
+            <li class="portfolio-item" data-category="support" data-reveal>
+              <article class="project-card">
 
-                  <p class="card-subtitle">Municipal Police Station - Bauang</p>
-
-                  <h3 class="h3 card-title">IT Support &amp; Infrastructure</h3>
-
-                  <span class="btn-link">
-                    <span>View Project</span>
-
-                    <ion-icon name="arrow-forward"></ion-icon>
-                  </span>
-
+                <div class="project-thumb" aria-hidden="true">
+                  <ion-icon name="server-outline"></ion-icon>
                 </div>
-              </a>
+
+                <div class="project-body">
+                  <p class="project-org">Municipal Police Station of Bauang</p>
+
+                  <h3 class="h3 project-title">Municipal IT Infrastructure Management</h3>
+
+                  <p class="project-desc">Managed and maintained the station's IT infrastructure — servers,
+                    workstations, and peripheral devices — with operating system updates and consistent uptime.</p>
+
+                  <ul class="project-tags">
+                    <li>Networking</li>
+                    <li>Servers</li>
+                    <li>Hardware</li>
+                  </ul>
+                </div>
+
+              </article>
+            </li>
+
+            <li class="portfolio-item" data-category="web" data-reveal>
+              <article class="project-card">
+
+                <div class="project-thumb" aria-hidden="true">
+                  <ion-icon name="globe-outline"></ion-icon>
+                </div>
+
+                <div class="project-body">
+                  <p class="project-org">Goodmedia</p>
+
+                  <h3 class="h3 project-title">Content &amp; SEO Operations Workflow</h3>
+
+                  <p class="project-desc">Ran WordPress and Wix publishing workflows, keyword research, and SEO
+                    reviews — supported with Google Workspace, Canva, and AI productivity tools.</p>
+
+                  <ul class="project-tags">
+                    <li>WordPress</li>
+                    <li>Wix</li>
+                    <li>SEO</li>
+                  </ul>
+                </div>
+
+              </article>
+            </li>
+
+            <li class="portfolio-item" data-category="web" data-reveal>
+              <article class="project-card">
+
+                <div class="project-thumb" aria-hidden="true">
+                  <ion-icon name="code-slash-outline"></ion-icon>
+                </div>
+
+                <div class="project-body">
+                  <p class="project-org">Personal Project</p>
+
+                  <h3 class="h3 project-title">Portfolio &amp; Brand Site</h3>
+
+                  <p class="project-desc">Designed, built, and deployed this responsive portfolio on GitHub Pages
+                    with vanilla HTML, CSS, and JavaScript — the site you're looking at right now.</p>
+
+                  <ul class="project-tags">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>GitHub Pages</li>
+                  </ul>
+                </div>
+
+              </article>
             </li>
 
           </ul>
@@ -316,13 +504,13 @@
           <h2 class="h2 section-title">I Keep My Skills Sharp</h2>
 
           <p class="section-text">
-            Troubleshooting, networking, data entry, web operations, and customer support - backed by national
+            Troubleshooting, networking, data entry, web operations, and customer support — backed by national
             certifications and hands-on experience.
           </p>
 
           <ul class="skills-list">
 
-            <li class="skills-item">
+            <li class="skills-item" data-reveal>
               <div class="wrapper" style="width: 95%">
                 <h3 class="skills-title">Troubleshooting</h3>
 
@@ -334,7 +522,7 @@
               </div>
             </li>
 
-            <li class="skills-item">
+            <li class="skills-item" data-reveal>
               <div class="wrapper" style="width: 90%">
                 <h3 class="skills-title">Networking</h3>
 
@@ -346,7 +534,7 @@
               </div>
             </li>
 
-            <li class="skills-item">
+            <li class="skills-item" data-reveal>
               <div class="wrapper" style="width: 95%">
                 <h3 class="skills-title">Data Entry</h3>
 
@@ -358,7 +546,7 @@
               </div>
             </li>
 
-            <li class="skills-item">
+            <li class="skills-item" data-reveal>
               <div class="wrapper" style="width: 85%">
                 <h3 class="skills-title">Web Development</h3>
 
@@ -370,7 +558,7 @@
               </div>
             </li>
 
-            <li class="skills-item">
+            <li class="skills-item" data-reveal>
               <div class="wrapper" style="width: 80%">
                 <h3 class="skills-title">Programming</h3>
 
@@ -382,7 +570,7 @@
               </div>
             </li>
 
-            <li class="skills-item">
+            <li class="skills-item" data-reveal>
               <div class="wrapper" style="width: 90%">
                 <h3 class="skills-title">Customer Service</h3>
 
@@ -395,6 +583,23 @@
             </li>
 
           </ul>
+
+          <div class="tools-block" data-reveal>
+            <h3 class="h3 tools-title">Tools &amp; Platforms I Work With</h3>
+
+            <ul class="tool-list">
+              <li>WordPress</li>
+              <li>Wix</li>
+              <li>Kotlin</li>
+              <li>JavaScript</li>
+              <li>AnyDesk</li>
+              <li>Google Workspace</li>
+              <li>Excel</li>
+              <li>Canva</li>
+              <li>Windows</li>
+              <li>ChatGPT</li>
+            </ul>
+          </div>
 
         </div>
       </section>
@@ -410,7 +615,7 @@
       <section class="section contact" id="contact">
         <div class="container">
 
-          <div class="contact-card">
+          <div class="contact-card" data-reveal>
 
             <p class="card-subtitle">Don't be shy</p>
 
@@ -502,6 +707,8 @@
       <p class="copyright">
         &copy; 2026 <a href="#" class="copyright-link">Marvilyn Calibuso</a>. All Rights Reserved
       </p>
+
+      <p class="footer-note">Built with HTML, CSS &amp; JavaScript — deployed on GitHub Pages</p>
 
     </div>
   </footer>
