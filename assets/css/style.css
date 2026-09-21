@@ -1015,8 +1015,8 @@ textarea.contact-input {
 }
 
 @media (min-width: 992px) {
-  .hero-name { font-size: 5rem; }
-  .hero-role { font-size: 2.4rem; }
+  .hero-title .hero-name { font-size: 5rem; }
+  .hero-title .hero-role { font-size: 2.4rem; }
 }
 
 /**
