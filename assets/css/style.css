@@ -752,10 +752,6 @@ textarea.contact-input {
 
   .btn-group { justify-content: flex-start; }
 
-  .hero-name { font-size: 5rem; }
-
-  .hero-role { font-size: 2.4rem; }
-
   .hero-title {
     --fs-5: 2.2rem;
     margin-block-end: 25px;
@@ -1016,6 +1012,11 @@ textarea.contact-input {
 .hero-role {
   display: inline-block;
   margin-block-start: 6px;
+}
+
+@media (min-width: 992px) {
+  .hero-name { font-size: 5rem; }
+  .hero-role { font-size: 2.4rem; }
 }
 
 /**
