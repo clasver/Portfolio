@@ -958,6 +958,275 @@ textarea.contact-input {
   z-index: 0;
 }
 
+/**
+ * Skills chart container
+ */
+.skills-chart {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-block-start: 40px;
+}
+
+/**
+ * Individual skill chart
+ */
+.skill-chart-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-10);
+  padding: 20px;
+  text-align: center;
+  transition: var(--transition-2);
+}
+
+.skill-chart-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
+}
+
+.skill-chart-title {
+  color: var(--white);
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  margin-block-end: 15px;
+}
+
+/**
+ * Circular skill progress
+ */
+.skill-progress-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+  background: conic-gradient(
+    var(--klein-blue) 0%,
+    var(--klein-blue) var(--skill-percent, 0),
+    transparent var(--skill-percent, 0) 100%
+  );
+}
+
+/**
+ * Skill percentage text
+ */
+.skill-percent-text {
+  position: absolute;
+  color: var(--white);
+  font-family: var(--ff-barlow);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-4);
+}
+
+/**
+ * Skill label
+ */
+.skill-label {
+  color: var(--TEXT_MED);
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-6);
+}
+
+/**
+ * Animated counter for stats
+ */
+.stats-counter {
+  display: flex;
+  justify-content: space-around;
+  margin-block-start: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-10);
+  flex: 1;
+  min-width: 120px;
+}
+
+.stat-number {
+  color: var(--klein-blue);
+  font-family: var(--ff-barlow);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-2);
+  display: block;
+  margin-block-end: 5px;
+}
+
+.stat-label {
+  color: var(--TEXT_MED);
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-5);
+}
+
+/**
+ * Testimonials section
+ */
+.testimonials {
+  background: var(--PANEL2);
+  border-radius: var(--radius-15);
+  padding: 40px;
+  margin-block-start: 60px;
+}
+
+.testimonials-title {
+  text-align: center;
+  color: var(--white);
+  font-family: var(--ff-barlow);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-3);
+  margin-block-end: 30px;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  flex: 0 0 300px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-10);
+  padding: 25px;
+  transition: var(--transition-2);
+}
+
+.testimonial-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
+}
+
+.testimonial-text {
+  color: var(--TEXT_MED);
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-5);
+  line-height: 1.6;
+  margin-block-end: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--klein-blue);
+}
+
+.testimonial-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-author-name {
+  color: var(--white);
+  font-family: var(--ff-barlow);
+  font-weight: var(--fw-600);
+}
+
+.testimonial-author-role {
+  color: var(--TEXT_MED);
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-6);
+}
+
+/**
+ * Enhanced project cards with hover effects
+ */
+.project-card {
+  transition: var(--transition-2);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -12px rgba(5, 10, 30, 0.15);
+}
+
+/**
+ * Pulse animation for call-to-action buttons
+ */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(92, 131, 241, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(92, 131, 241, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(92, 131, 241, 0);
+  }
+}
+
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+/**
+ * Mobile menu enhancement
+ */
+.navbar-link.active {
+  color: var(--klein-blue);
+}
+
+/**
+ * Scroll progress indicator
+ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--klein-blue);
+  width: 0%;
+  z-index: 1000;
+}
+
+/**
+ * Floating action button for quick contact
+ */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: var(--klein-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: var(--fs-4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 900;
+  transition: var(--transition-2);
+}
+
+.fab:hover {
+  background: var(--bluetiful);
+  transform: scale(1.1);
+}
+
 .hero-banner .img-cover,
 .hero-banner .elem { position: relative; z-index: 1; }
 

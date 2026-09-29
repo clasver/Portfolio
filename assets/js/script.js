@@ -72,7 +72,7 @@ if (contactForm) {
 }
 
 /*
-  ENHANCEMENTS
+   ENHANCEMENTS
 */
 
 /* Project category filter */
@@ -141,3 +141,43 @@ if (spyLinks.length > 0 && spySections.length > 0) {
   window.addEventListener("scroll", setActiveSpyLink, { passive: true });
   setActiveSpyLink();
 }
+
+/* Scroll progress indicator */
+const scrollProgress = document.createElement("div");
+scrollProgress.className = "scroll-progress";
+document.body.appendChild(scrollProgress);
+
+window.addEventListener("scroll", function () {
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPos = window.scrollY;
+  const scrollPercent = (scrollPos / scrollHeight) * 100;
+  scrollProgress.style.width = scrollPercent + "%";
+});
+
+/* Floating Action Button for quick contact */
+const fab = document.createElement("a");
+fab.href = "mailto:Marvilynlion@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Marvilyn%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20potential%20collaboration.";
+fab.className = "fab";
+fab.innerHTML = '<ion-icon name="mail-outline"></ion-icon>';
+document.body.appendChild(fab);
+
+/* Pulse animation for primary buttons */
+const primaryButtons = document.querySelectorAll(".btn-primary.blue");
+primaryButtons.forEach(button => {
+  button.classList.add("btn-pulse");
+});
+
+/* Enhanced navbar active link styling */
+const navLinks = document.querySelectorAll(".navbar-link");
+navLinks.forEach(link => {
+  link.addEventListener("mouseenter", function () {
+    if (!this.classList.contains("active")) {
+      this.style.color = var(--klein-blue);
+    }
+  });
+  link.addEventListener("mouseleave", function () {
+    if (!this.classList.contains("active")) {
+      this.style.color = var(--white);
+    }
+  });
+});
