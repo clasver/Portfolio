@@ -236,10 +236,10 @@ body {
 
 .header {
   position: fixed;
-  padding-block: 18px;
+  padding-block: 12px;
   width: 100%;
   background-color: rgba(18,18,24,0.85);
-  height: 80px;
+  height: 65px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   overflow: hidden;
   transition: 0.3s var(--cubic-out), transform 0.3s ease, opacity 0.3s ease;
