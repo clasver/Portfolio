@@ -181,3 +181,36 @@ navLinks.forEach(link => {
     }
   });
 });
+
+/* Hide header on scroll down, show on scroll up */
+let lastScrollY = window.scrollY;
+let ticking = false;
+const header = document.querySelector("[data-header]");
+
+function onScroll() {
+  const scrollY = window.scrollY;
+  if (scrollY > lastScrollY && scrollY > 100) {
+    // scrolling down past threshold -> hide
+    header.classList.add("header-hidden");
+  } else if (scrollY < lastScrollY) {
+    // scrolling up -> show
+    header.classList.remove("header-hidden");
+  }
+  lastScrollY = scrollY;
+
+  // After scroll ends, ensure header is visible (optional)
+  clearTimeout(window.scrollEndTimer);
+  window.scrollEndTimer = setTimeout(() => {
+    header.classList.remove("header-hidden");
+  }, 150);
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      onScroll();
+      ticking = false;
+    });
+    ticking = true;
+  }
+});

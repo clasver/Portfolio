@@ -236,18 +236,25 @@ body {
 
 .header {
   position: fixed;
-  padding-block: 15px;
+  padding-block: 18px;
   width: 100%;
-  background-color: var(--space-cadet);
-  height: 65px;
-  box-shadow: var(--shadow);
+  background-color: rgba(18,18,24,0.85);
+  height: 80px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   overflow: hidden;
-  transition: 0.25s var(--cubic-out);
-  z-index: 4;
+  transition: 0.3s var(--cubic-out), transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+  backdrop-filter: saturate(180%) blur(8px);
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .header.nav-active {
-  height: 335px;
+  height: 340px;
   transition-duration: 0.35s;
 }
 
@@ -255,15 +262,35 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .logo {
   color: var(--white);
   font-family: var(--ff-poppins);
-  font-size: 2.4rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  position: relative;
 }
 
-.nav-toggle-btn { font-size: 3rem; }
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--klein-blue);
+  transition: width 0.3s ease;
+}
+
+.logo:hover::after,
+.logo:focus::after {
+  width: 100%;
+}
+
+.nav-toggle-btn { font-size: 2.8rem; }
 
 .nav-toggle-btn .close-icon,
 .nav-toggle-btn.active .menu-icon { display: none; }
@@ -273,13 +300,16 @@ body {
 
 .navbar {
   position: absolute;
-  top: 65px;
+  top: 0;
   left: 0;
   width: 100%;
-  padding-inline: 20px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
   visibility: hidden;
   opacity: 0;
   transition: var(--transition-2);
+  height: 100%;
 }
 
 .header.nav-active .navbar {
@@ -290,15 +320,50 @@ body {
 .navbar-link {
   color: var(--white);
   font-family: var(--ff-barlow);
-  padding-block: 3px;
-  transition: var(--transition-1);
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0.5rem 0;
+  margin: 0 0.75rem;
+  transition: color 0.2s ease;
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--orange-soda); }
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--klein-blue);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after,
+.navbar-link:focus::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+.navbar-link:is(:hover, :focus) { color: var(--klein-blue); }
 
 .navbar .btn {
   background-color: var(--klein-blue);
-  margin-block-start: 15px;
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin-left: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar .btn:hover {
+  background-color: var(--bluetiful);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(92,131,241,0.2);
 }
 
 
@@ -947,6 +1012,76 @@ textarea.contact-input {
  * .hero-glow - soft blue halo behind the portrait
  */
 
+/**
+ * Float animation - subtle up/down movement
+ */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/**
+ * Gradient text animation
+ */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/**
+ * Border draw animation
+ */
+@keyframes borderDraw {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/**
+ * Icon bounce animation
+ */
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/**
+ * Background pattern animation
+ */
+@keyframes patternShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/**
+ * .hero-glow - soft blue halo behind the portrait
+ */
+
 .hero-banner { position: relative; }
 
 .hero-glow {
@@ -1245,6 +1380,8 @@ textarea.contact-input {
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 42px rgba(92, 131, 241, 0.35);
+  animation: gradientShift 4s ease infinite;
+  animation-fill-mode: forwards;
 }
 
 /**
