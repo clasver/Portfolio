@@ -239,16 +239,16 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 50px;
   background: linear-gradient(90deg, #ff00cc, #3333ff, #ff00cc);
   background-size: 200% 200%;
   animation: gradientShift 5s ease infinite;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -259,7 +259,7 @@ body {
 }
 
 .header.nav-active {
-  height: 340px;
+  height: 280px;
   transition-duration: 0.35s;
 }
 
@@ -273,9 +273,9 @@ body {
 .logo {
   color: var(--white);
   font-family: var(--ff-poppins);
-  font-size: 2.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   position: relative;
 }
 
@@ -283,11 +283,11 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -3px;
   width: 0;
-  height: 2px;
+  height: 1.5px;
   background: var(--klein-blue);
-  transition: width 0.3s ease;
+  transition: width 0.25s ease;
 }
 
 .logo:hover::after,
@@ -295,7 +295,7 @@ body {
   width: 100%;
 }
 
-.nav-toggle-btn { font-size: 2.8rem; }
+.nav-toggle-btn { font-size: 1.8rem; }
 
 .nav-toggle-btn .close-icon,
 .nav-toggle-btn.active .menu-icon { display: none; }
@@ -325,50 +325,59 @@ body {
 .navbar-link {
   color: var(--white);
   font-family: var(--ff-barlow);
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   position: relative;
-  padding: 0.5rem 0;
-  margin: 0 0.75rem;
-  transition: color 0.2s ease;
+  padding: 0.25rem 0;
+  margin: 0 0.5rem;
+  transition: color 0.15s ease;
 }
 
 .navbar-link::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -4px;
+  left: 50%;
+  bottom: -3px;
   width: 0;
-  height: 2px;
+  height: 1.5px;
   background: var(--klein-blue);
-  transition: width 0.3s ease;
+  transition: width 0.25s ease, left 0.25s ease;
+  transform: translateX(-50%);
 }
 
 .navbar-link:hover::after,
-.navbar-link:focus::after,
-.navbar-link.active::after {
+.navbar-link:focus::after {
   width: 100%;
+  left: 50%;
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--klein-blue); }
+.navbar-link.active {
+  color: var(--klein-blue);
+}
+
+.navbar-link.active::after {
+  width: 60%;
+  left: 50%;
+}
 
 .navbar .btn {
   background-color: var(--klein-blue);
   color: var(--white);
   border: none;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  margin-left: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  margin-left: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  white-space: nowrap;
 }
 
 .navbar .btn:hover {
   background-color: var(--bluetiful);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(92,131,241,0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(92,131,241,0.2);
 }
 
 
