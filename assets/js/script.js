@@ -167,25 +167,9 @@ primaryButtons.forEach(button => {
   button.classList.add("btn-pulse");
 });
 
-/* Enhanced navbar active link styling */
-const navLinks = document.querySelectorAll(".navbar-link");
-navLinks.forEach(link => {
-  link.addEventListener("mouseenter", function () {
-    if (!this.classList.contains("active")) {
-      this.style.color = var(--klein-blue);
-    }
-  });
-  link.addEventListener("mouseleave", function () {
-    if (!this.classList.contains("active")) {
-      this.style.color = var(--white);
-    }
-  });
-});
-
 /* Hide header on scroll down, show on scroll up */
 let lastScrollY = window.scrollY;
 let ticking = false;
-const header = document.querySelector("[data-header]");
 
 function onScroll() {
   const scrollY = window.scrollY;

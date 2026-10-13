@@ -1874,3 +1874,64 @@ textarea.contact-input {
 
   .scroll-cue { animation: none; }
 }
+
+/**
+ * Polish pass — interaction, focus and motion refinements
+ * (pairs with gsap-motion.js; none of this depends on GSAP loading)
+ */
+
+/* Nav-link hover tint (previously handled by a removed JS block) */
+.navbar-link:is(:hover, :focus-visible) { color: var(--klein-blue); }
+
+/* Visible, consistent keyboard focus ring */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.filter-btn:focus-visible {
+  outline: 2px solid var(--sky-crayola);
+  outline-offset: 3px;
+}
+
+/* Stat tiles: same gentle lift as the skill-chart tiles.
+   Inset shadow = border without any layout shift. */
+.stat-item {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  transition: var(--transition-2);
+}
+
+.stat-item:is(:hover, :focus-within) {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(92, 131, 241, 0.4);
+}
+
+/* Numeric widgets stay aligned while GSAP animates them */
+.stat-number,
+.skill-percent-text { font-variant-numeric: tabular-nums; }
+
+/* Screenshot thumbnails get a gentle push-in on card hover */
+.project-thumb.is-shot img { transition: transform 0.5s ease; }
+
+.project-card:is(:hover, :focus-within) .project-thumb.is-shot img {
+  transform: scale(1.045);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-item:is(:hover, :focus-within) { transform: none; }
+  .project-thumb.is-shot img { transition: none; }
+  .project-card:is(:hover, :focus-within) .project-thumb.is-shot img { transform: none; }
+}
+
+/**
+ * Motion-ready hero — only when scripting is available.
+ * The two GSAP-owned hero containers start hidden so nothing paints before
+ * the entrance timeline runs (GSAP is deferred, off a CDN, so a frame or two
+ * would otherwise show the hero at full opacity, then snap back to animate).
+ * gsap-motion.js always reveals them again — via the timeline itself, or via
+ * its revealHero() fallback on the no-GSAP / reduced-motion / error paths.
+ * Browsers without the `scripting` media-feature simply skip the hide.
+ */
+@media (scripting: enabled) {
+  .hero-banner,
+  .hero-content { opacity: 0; }
+}
