@@ -1,0 +1,216 @@
+/*-----------------------------------*\
+  #case-study.css
+\*-----------------------------------*/
+
+/* Reuse CSS variables from style.css via :root */
+
+/* Layout tweaks for case study pages */
+.section {
+  padding-block: var(--section-padding);
+}
+
+/* Project card base style (already defined in style.css, but we ensure) */
+.project-card {
+  background-color: var(--midnight-blue);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-20);
+  overflow: hidden;
+  transition: var(--transition-2);
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(92,131,241,0.45);
+  box-shadow: 0 18px 40px -12px rgba(5,10,30,0.7);
+}
+.project-body {
+  padding: 24px 22px 26px;
+}
+.project-title {
+  color: var(--white);
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-700);
+  line-height: 1.3;
+  margin-block-end: 10px;
+}
+.project-desc {
+  color: var(--manatee);
+  font-size: var(--fs-6);
+  line-height: 1.7;
+  margin-block-end: 18px;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.project-tags li {
+  background: linear-gradient(90deg, rgba(48,88,200,0.22), rgba(92,131,241,0.22));
+  border: 1px solid rgba(92,131,241,0.34);
+  color: #c9d6ff;
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  padding: 6px 13px;
+  border-radius: 50px;
+}
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-start: 16px;
+}
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  color: #c9d6ff;
+  background: linear-gradient(90deg, rgba(48,88,200,0.22), rgba(92,131,241,0.22));
+  border: 1px solid rgba(92,131,241,0.34);
+  border-radius: 50px;
+  padding: 7px 14px;
+  text-decoration: none;
+  transition: var(--transition-2);
+}
+.project-links a:hover,
+.project-links a:focus-visible {
+  color: var(--white);
+  border-color: var(--sky-crayola);
+  transform: translateY(-1px);
+}
+.project-links .pl-live {
+  background: var(--klein-blue);
+  border-color: var(--klein-blue);
+  color: #fff;
+}
+.project-links .pl-live:hover,
+.project-links .pl-live:focus-visible {
+  background: var(--bluetiful);
+  border-color: var(--bluetiful);
+}
+
+/* Tags container for Skills Demonstrated */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-start: 12px;
+}
+.tags .tag {
+  background: linear-gradient(90deg, rgba(48,88,200,0.22), rgba(92,131,241,0.22));
+  border: 1px solid rgba(92,131,241,0.34);
+  color: #c9d6ff;
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+
+/* SEO table styling */
+.seo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block-start: 16px;
+}
+.seo-table th,
+.seo-table td {
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: left;
+  font-size: var(--fs-6);
+}
+.seo-table th {
+  background-color: rgba(255,255,255,0.05);
+  color: var(--white);
+  font-weight: var(--fw-600);
+}
+.seo-table tbody tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.02);
+}
+.seo-table tbody tr:hover {
+  background-color: rgba(255,255,255,0.04);
+}
+
+/* Code block styling */
+pre {
+  background-color: rgba(255,255,255,0.05);
+  color: var(--cadet-blue-crayola);
+  padding: 16px;
+  border-radius: var(--radius-10);
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: var(--fs-7);
+  line-height: 1.5;
+  margin-block-start: 16px;
+}
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(255,255,255,0.05);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* Checklist styling */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  margin-block-end: 12px;
+}
+.checklist li .checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--cadet-blue-crayola);
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.checklist li .checkbox.checked {
+  background-color: var(--klein-blue);
+  border-color: var(--klein-blue);
+}
+.checklist li .checkbox.checked::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  left: 6px;
+  top: 2px;
+}
+.checklist li .text {
+  flex: 1;
+  color: var(--cadet-blue-crayola);
+  font-size: var(--fs-6);
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .seo-table th,
+  .seo-table td {
+    padding: 8px 12px;
+    font-size: var(--fs-7);
+  }
+}
+
+.badge {
+  background: var(--minion-yellow);
+  color: var(--black);
+  font-size: var(--fs-7);
+  padding: 2px 6px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
