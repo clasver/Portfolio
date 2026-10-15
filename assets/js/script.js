@@ -52,7 +52,7 @@ window.addEventListener("scroll", function () {
       scrollProgress.style.width = scrolled + "%";
       scrollProgress.setAttribute("aria-label", "Scroll progress: " + Math.round(scrolled) + "%");
     }
-
+  });
 
 
 
@@ -253,3 +253,4 @@ if (darkModeToggle) {
     }
   });
 }
+
