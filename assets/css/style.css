@@ -333,7 +333,7 @@ body {
 .navbar-link {
   color: var(--white);
   font-family: var(--ff-barlow);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
   position: relative;
   padding: 0.25rem 0;
