@@ -57,7 +57,7 @@ window.addEventListener("scroll", function () {
 
 
 /**
- * contact form -> mailto
+ * contact form -> Formspree
  */
 
 const contactForm = document.querySelector("#contact-form");
@@ -70,10 +70,24 @@ if (contactForm) {
     const email = this.elements["email"].value.trim();
     const message = this.elements["message"].value.trim();
 
-    const subject = encodeURIComponent("Portfolio message from " + name);
-    const body = encodeURIComponent(message + "\n\nFrom: " + name + " <" + email + ">");
-
-    window.location.href = "mailto:Marvilynlion@gmail.com?subject=" + subject + "&body=" + body;
+    fetch("https://formspree.io/f/meaepgbl", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name, email, message })
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Message sent successfully!");
+        this.reset();
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    })
+    .catch(error => {
+      alert("Error sending message: " + error);
+    });
   });
 }
 
@@ -253,4 +267,3 @@ if (darkModeToggle) {
     }
   });
 }
-
