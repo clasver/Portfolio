@@ -45,7 +45,13 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
     backTopBtn.classList.remove("active");
   }
-});
+    // Scroll progress
+    if (scrollProgress) {
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (window.scrollY / height) * 100;
+      scrollProgress.style.width = scrolled + "%";
+      scrollProgress.setAttribute("aria-label", "Scroll progress: " + Math.round(scrolled) + "%");
+    }
 
 
 

@@ -1415,6 +1415,7 @@ textarea.contact-input {
   height: 3px;
   background: var(--klein-blue);
   width: 0%;
+  transition: width 0.2s ease;
   z-index: 1000;
 }
 
