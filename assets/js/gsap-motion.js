@@ -5,8 +5,9 @@
  * Design rules:
  *  - Loads AFTER script.js. script.js owns the IntersectionObserver reveal for
  *    mid-page sections; GSAP only takes over the hero, the animated widgets
- *    (stat counters + skill rings), the portfolio-card stagger and the hero-glow
- *    parallax. Every element GSAP owns gets its [data-reveal] attribute stripped
+ *    (stat counters + skill rings), the portfolio-card stagger, hero-glow
+ *    parallax, and case-study content reveals. Every element GSAP owns gets its
+ *    [data-reveal] attribute stripped
  *    so the CSS reveal rule can't fight the timeline.
  *  - If GSAP is missing (CDN blocked / offline), this file does nothing and the
  *    page falls back to the plain CSS + IntersectionObserver behaviour.
@@ -243,6 +244,66 @@
   }
 
   /* ---------------------------------------------------------------- *
+   * 6. CASE-STUDY CONTENT REVEALS
+   * ---------------------------------------------------------------- */
+  function caseStudyReveal() {
+    var section = document.querySelector('#case-study');
+    if (!section || !hasST) return;
+
+    var container = section.querySelector('.container');
+    if (!container) return;
+
+    var intro = Array.prototype.filter.call(container.children, function (el) {
+      return el.matches('.section-subtitle, .section-title, .section-text');
+    });
+
+    if (intro.length) {
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'top 78%',
+        once: true,
+        onEnter: function () {
+          gsap.fromTo(intro,
+            { autoAlpha: 0, y: 18 },
+            {
+              autoAlpha: 1,
+              y: 0,
+              duration: 0.62,
+              ease: EASE,
+              stagger: 0.09,
+              clearProps: 'opacity,visibility,transform'
+            }
+          );
+        }
+      });
+    }
+
+    var cards = Array.prototype.filter.call(container.children, function (el) {
+      return el.classList.contains('project-card');
+    });
+    if (!cards.length) return;
+
+    ScrollTrigger.batch(cards, {
+      start: 'top 88%',
+      once: true,
+      onEnter: function (batch) {
+        gsap.fromTo(batch,
+          { autoAlpha: 0, y: 22 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.58,
+            ease: EASE,
+            stagger: 0.08,
+            overwrite: 'auto',
+            clearProps: 'opacity,visibility,transform'
+          }
+        );
+      }
+    });
+  }
+
+  /* ---------------------------------------------------------------- *
    * BOOT
    * ---------------------------------------------------------------- */
   function init() {
@@ -252,6 +313,7 @@
       statCounters();
       skillRings();
       portfolioStagger();
+      caseStudyReveal();
     } catch (err) {
       revealHero(); // never leave the hero hidden if something throws
     }
