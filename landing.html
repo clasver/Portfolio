@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="10 printable Halloween coloring pages for kids — ghosts, pumpkins, witches &amp; candy. Instant-download PDF, kawaii style." />
+<title>Halloween Coloring Pages for Kids — Ghosts, Pumpkins &amp; Witches</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<link rel="preconnect" href="https://fonts.bunny.net" />
+<link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|geist:400,600,700" rel="stylesheet" />
+<style>
+  :root {
+    --navy-900: #0f172a;
+    --navy-800: #1e293b;
+    --navy-700: #334155;
+    --amber-500: #f59e0b;
+    --amber-600: #d97706;
+    --amber-400: #fbbf24;
+    --beige: #f3efea;
+    --beige-2: #ede6da;
+    --charcoal: #333333;
+    --card: #ffffff;
+    --card-border: #e2e8f0;
+    --text-muted: #475569;
+    --shadow: 0 12px 32px rgba(15,23,42,.14);
+    --radius: 16px;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --card-border: #334155;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --beige: #1e293b;
+      --beige-2: #0f172a;
+      --charcoal: #f1f5f9;
+      --shadow: 0 12px 32px rgba(0,0,0,.45);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .hero-navy {
+    background: linear-gradient(160deg, #0b1120 0%, #0f172a 55%, #1e293b 100%);
+  }
+  .hero-img {
+    position: relative; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 20px 50px rgba(15,23,42,.35);
+    animation: float 5s ease-in-out infinite;
+  }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .badge-pill {
+    display: inline-flex; align-items: center; gap: .45rem;
+    background: rgba(245,158,11,.14); color: #fbbf24;
+    padding: .45rem 1rem; border-radius: 999px;
+    font-size: .8rem; font-weight: 600; letter-spacing: .02em;
+    border: 1px solid rgba(245,158,11,.4);
+  }
+  .stat-card {
+    background: var(--beige);
+    border: 1px solid rgba(245,158,11,.2);
+    border-radius: var(--radius); padding: 1.25rem; text-align: center;
+    box-shadow: 0 6px 16px rgba(15,23,42,.06);
+  }
+  .stat-icon { font-size: 1.6rem; }
+  .card-rounded {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 14px; padding: 1.1rem 1.2rem;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .card-rounded:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15,23,42,.12); }
+  .card-icon {
+    width: 42px; height: 42px; border-radius: 12px;
+    background: var(--beige); color: var(--amber-600);
+    display: flex; align-items: center; justify-content: center; font-size: 1.05rem;
+  }
+  .step { position: relative; padding: 1rem 0; }
+  .step::before {
+    content: ""; position: absolute; left: -1.4rem; top: 1.2rem; bottom: 1.2rem;
+    width: 3px; background: linear-gradient(180deg, var(--amber-500), var(--amber-600)); border-radius: 2px;
+  }
+  .step-dot {
+    position: relative; z-index: 1; width: 26px; height: 26px; border-radius: 50%;
+    background: var(--amber-500); color: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; font-weight: 700;
+    box-shadow: 0 0 0 4px rgba(245,158,11,.25);
+  }
+  .step-content { padding-left: 2.2rem; }
+  .cta-banner {
+    background: linear-gradient(120deg, #f59e0b 0%, #fbbf24 60%, #d97706 100%);
+    color: #fff; border-radius: var(--radius); padding: 2rem 2.2rem;
+    box-shadow: 0 16px 40px rgba(245,158,11,.35);
+  }
+  .cta-banner h2 { color: #1c1916; }
+  .cta-banner .btn {
+    background: #fff; color: #b45309;
+  }
+  .cta-banner .btn:hover { background: #fff; transform: translateY(-1px); }
+  .cta-banner .btn svg { width: 18px; height: 18px; }
+  .cta-banner .btn-white {
+    background: #fff; color: #b45309; border: 2px solid #fff;
+  }
+  .cta-banner .btn-white:hover { background: var(--amber-400); color: #1c1916; }
+
+  /* Dark CTA button (for "Ready to color" section) */
+  .btn-cta {
+    background: #1c1916;
+    color: #fff;
+    border: 2px solid #1c1916;
+    padding: .75rem 1.5rem;
+    border-radius: .875rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background .2s ease, transform .1s ease, box-shadow .2s ease;
+    font-family: var(--font-sans);
+  }
+  .btn-cta:hover {
+    background: #3f3634;
+    border-color: #3f3634;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  }
+  .btn-cta:active {
+    background: #1c1916;
+    transform: translateY(0);
+  }
+  .btn-cta svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    stroke: currentColor;
+  }
+  .trust-row { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .trust-chip {
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22);
+    border-radius: 999px; padding: .5rem 1rem; font-size: .82rem; font-weight: 600; color: #f1f5f9;
+    display: inline-flex; align-items: center; gap: .4rem;
+  }
+  .reveal { transform: translateY(36px); opacity: 1; }
+  .hero-inner { transform: none; opacity: 1; }
+  footer { border-top: 1px solid var(--card-border); }
+
+  /* ---- Rating widget ---- */
+  .stars { display: inline-flex; gap: .15rem; align-items: center; }
+  .star {
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; cursor: pointer; color: #d1d5db; transition: color .15s;
+    line-height: 1;
+  }
+  .star.filled { color: #f59e0b; }
+  .star:hover { color: #f59e0b; }
+  .star input { position: absolute; opacity: 0; pointer-events: none; }
+  .rating-value { font-weight: 700; color: #333333; }
+  .rating-label { font-size: .82rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: .04em; }
+</style>
+</head>
+<body>
+
+<header id="top" class="fixed top-0 left-0 right-0 z-40">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 text-lg font-bold text-[#f1f5f9]">
+      <span class="w-3 h-3 rounded-full bg-[#f59e0b] inline-block"></span>
+      <span class="text-[#f1f5f9]">ColorKit</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-[#94a3b8]">
+      <a href="#what" class="hover:text-[#f1f5f9]">What's inside</a>
+      <a href="#use" class="hover:text-[#f1f5f9]">Perfect for</a>
+      <a href="#print" class="hover:text-[#f1f5f9]">Print tips</a>
+      <a href="#review" class="hover:text-[#f1f5f9]">Reviews</a>
+    </nav>
+    <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+  <ul class="md:hidden mobile-menu hidden px-5 pb-4 space-y-2 text-sm font-medium text-[#94a3b8]">
+    <li><a href="#what" class="block py-1 hover:text-[#f1f5f9]">What's inside</a></li>
+    <li><a href="#use" class="block py-1 hover:text-[#f1f5f9]">Perfect for</a></li>
+    <li><a href="#print" class="block py-1 hover:text-[#f1f5f9]">Print tips</a></li>
+    <li><a href="#review" class="block py-1 hover:text-[#f1f5f9]">Reviews</a></li>
+  </ul>
+</header>
+
+<section class="relative pt-24 pb-20 sm:pt-32 sm:pb-28 hero-navy overflow-hidden">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal hero-inner">
+      <span class="badge-pill hero-badge">📄 Instant download · $3.00</span>
+      <h1 class="hero-title text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mt-5 leading-tight text-white">
+        <span data-gumroad-field="name">Halloween Coloring Pages for Kids</span>
+      </h1>
+      <p class="hero-subtitle text-base sm:text-lg text-[#cbd5e1] mt-4 leading-relaxed">
+        10 printable pages of screen-free Halloween fun. Kawaii ghosts, pumpkins, witches &amp; candy — bold outlines built for crayons, markers &amp; colored pencils.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-4">
+        <a href="#checkout" class="btn btn-white h-min hero-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span data-gumroad-field="price" data-gumroad-option="Untitled">$3.00</span>
+        </a>
+        <button class="btn btn-white h-min hero-btn-artwork" onclick="openLightbox()" aria-label="View product artwork">View artwork</button>
+      </div>
+      <p class="text-xs text-[#94a3b8] mt-4">10 A4 &amp; US Letter pages · 9.18 MB PDF · no subscription, no ads</p>
+    </div>
+    <div class="reveal hero-inner flex justify-center">
+      <div class="relative w-full max-w-md">
+        <img src="https://public-files.gumroad.com/8urq73ulwov0c7ffab32nhfffzwj" alt="Halloween coloring pages artwork — kawaii ghosts, pumpkins, witches and candy" class="hero-img w-full h-auto object-cover" loading="eager" />
+        <div class="absolute inset-0 border-2 border-[#f59e0b]/40 rounded-2xl"></div>
+        <div class="absolute bottom-4 left-4 right-4 bg-[#0f172a]/80 text-white text-xs font-medium px-3 py-2 rounded-xl flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#f59e0b]"></span>
+          10 pages · instant download
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10">
+    <div class="trust-row">
+      <span class="trust-chip">🔒 Instant download</span>
+      <span class="trust-chip">🖨️ Printable PDF</span>
+      <span class="trust-chip">📱 10 pages · A4 + US Letter</span>
+      <span class="trust-chip">🎨 Kawaii style · no scary faces</span>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 sm:py-20 bg-[#f3efea]">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="stat-card reveal">
+        <div class="stat-icon">🎃</div>
+        <h3 class="text-lg font-bold mt-3 text-[#333333]">10 printable pages</h3>
+        <p class="text-sm text-[#6b7280] mt-1">A4 &amp; US Letter — bold outlines for crayons, markers &amp; colored pencils.</p>
+      </div>
+      <div class="stat-card reveal" style="animation-delay:.1s">
+        <div class="stat-icon">📄</div>
+        <h3 class="text-lg font-bold mt-3 text-[#333333]">One PDF</h3>
+        <p class="text-sm text-[#6b7280] mt-1">Download it and go. No subscription, no ads — just your pack.</p>
+      </div>
+      <div class="stat-card reveal" style="animation-delay:.2s">
+        <div class="stat-icon">🧸</div>
+        <h3 class="text-lg font-bold mt-3 text-[#333333]">Family-friendly</h3>
+        <p class="text-sm text-[#6b7280] mt-1">Cute, gentle characters — safe for kids ~3–8. No scary faces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="what" class="py-16 sm:py-20">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal">
+      <p class="text-sm font-semibold text-[#b45309] uppercase tracking-widest">What's inside</p>
+      <div data-gumroad-field="description"><p>Give kids 10 pages of screen-free Halloween fun. Kawaii ghosts, pumpkins, witches &amp; candy with bold lines made for crayons and markers.</p></div>
+      <div class="grid sm:grid-cols-2 gap-6">
+      <div class="card-rounded reveal">
+        <div class="card-icon">👻</div>
+        <h3 class="text-base font-bold mt-3 text-[#333333]">Ghosts</h3>
+        <p class="text-sm text-[#6b7280] mt-1">Floating friend shapes — wispy and easy to color.</p>
+      </div>
+      <div class="card-rounded reveal" style="animation-delay:.1s">
+        <div class="card-icon">🎃</div>
+        <h3 class="text-base font-bold mt-3 text-[#333333]">Pumpkins</h3>
+        <p class="text-sm text-[#6b7280] mt-1">Smiling jack-o'-lanterns with simple, bold outlines.</p>
+      </div>
+      <div class="card-rounded reveal" style="animation-delay:.2s">
+        <div class="card-icon">🧙</div>
+        <h3 class="text-base font-bold mt-3 text-[#333333]">Witches</h3>
+        <p class="text-sm text-[#6b7280] mt-1">Tiny cauldrons, hats and broomsticks.</p>
+      </div>
+      <div class="card-rounded reveal" style="animation-delay:.3s">
+        <div class="card-icon">🍬</div>
+        <h3 class="text-base font-bold mt-3 text-[#333333]">Candy</h3>
+        <p class="text-sm text-[#6b7280] mt-1">Confetti-happy treats for a festive touch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="use" class="py-16 sm:py-20 bg-[#f3efea]">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-10 reveal">
+      <p class="text-sm font-semibold text-[#b45309] uppercase tracking-widest">Perfect for</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-[#333333]">Families, classrooms &amp; gift-givers</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-rounded reveal">
+        <div class="card-icon">🏠</div>
+        <h3 class="text-base font-bold mt-3 text-[#333333]">Home activities</h3>
+        <p class="text-xs text-[#6b7280] mt-1">Quiet time for kids ~3–8</p>
+      </div>
+      <div class="card-rounded reveal" style="animation-delay:.1s">
+        <div class="card-icon">🎒</div>
+        <h3 class="text-base font-bold mt-3 text-[#333333]">Classroom parties</h3>
+        <p class="text-xs text-[#6b7280] mt-1">Halloween parties &amp; party bags</p>
+      </div>
+      <div class="card-rounded reveal" style="animation-delay:.2s">
+        <div class="card-icon">✈️</div>
+        <h3 class="text-base font-bold mt-3 text-[#333333]">Travel &amp; waiting rooms</h3>
+        <p class="text-xs text-[#6b7280] mt-1">Rainy-day quiet time</p>
+      </div>
+      <div class="card-rounded reveal" style="animation-delay:.3s">
+        <div class="card-icon">🎁</div>
+        <h3 class="text-base font-bold mt-3 text-[#333333]">Fast, low-prep gift</h3>
+        <p class="text-xs text-[#6b7280] mt-1">For a young trick-or-treater</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="print" class="py-16 sm:py-20">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-10 reveal">
+      <div>
+        <p class="text-sm font-semibold text-[#b45309] uppercase tracking-widest">Print instructions</p>
+        <ol class="mt-4 space-2 list-decimal list-inside text-sm text-[#6b7280]">
+          <li>Print in color or black &amp; white.</li>
+          <li>Portrait, or two-up for half-page cards.</li>
+          <li>Works with standard home printers and local print shops.</li>
+          <li>Reuse pages with washable markers, or slip them into page protectors.</li>
+        </ol>
+      </div>
+      <div class="bg-[#1e293b] text-[#f1f5f9] rounded-2xl p-6">
+        <h3 class="font-bold text-lg text-[#f59e0b]">License</h3>
+        <p class="text-sm text-[#94a3b8] mt-2">For personal and educational use only. Bulk/commercial reprinting requires permission — hit me up before using commercially.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="review" class="py-16 sm:py-20 bg-[#f3efea]">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-[#e2e8f0]">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="stars text-2xl text-[#f59e0b]" id="rating-stars">
+          <!-- 5 stars rendered by JS from the product's rating field -->
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="rating-label">Rating</span>
+          <span class="rating-value" data-gumroad-field="rating">—</span>
+        </div>
+        <div class="text-sm font-bold text-[#333333]">
+          <span data-gumroad-field="review-count">Be the first to review</span>
+          <span class="text-[#6b7280] font-normal">·</span>
+          <span class="text-sm text-[#6b7280]">|</span>
+          <a href="https://marvilynlion.gumroad.com/l/ggdjf/reviews" target="_blank" class="text-[#f59e0b] hover:underline font-semibold">Write a review</a>
+        </div>
+      </div>
+      <p class="text-xs text-[#94a3b8] mt-3">Reviews are moderated and only displayed once a written message is left.</p>
+    </div>
+  </div>
+</section>
+
+<section id="checkout" class="py-16 sm:py-20">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal cta-banner text-center">
+      <p class="text-xs font-semibold tracking-widest text-[#7c2d12] uppercase">Ready to color?</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Instant download, straight to your inbox</h2>
+      <p class="text-[#6b7280] mt-2 max-w-xl mx-auto">Add the PDF to your account and print at home or at your local shop. No subscription, no ads.</p>
+      <a href="#" class="btn btn-cta h-min mt-6" data-gumroad-action="buy" data-gumroad-option="Untitled">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span data-gumroad-field="price" data-gumroad-option="Untitled">Ready to color</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#475569]">
+    <p class="text-xs">© 2026 ColorKit. All rights reserved.</p>
+    <p class="text-xs">Personal &amp; educational use only.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-label="Image preview">
+  <span class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</span>
+  <img src="https://public-files.gumroad.com/8urq73ulwov0c7ffab32nhfffzwj" alt="Halloween coloring pages artwork" />
+</div>
+
+<script>
+  // ---- Fallback: if GSAP is missing/errored, show all content (prevents a blank page) ----
+  function ensureVisible() {
+    document.querySelectorAll('.reveal').forEach(el => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+  }
+
+  (function () {
+    if (typeof gsap === 'undefined') {
+      ensureVisible();
+      return;
+    }
+    try {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // ---- Hero entrance (plays on load; content is visible, slides up) ----
+      gsap.fromTo('.hero-badge', { opacity: 1, y: 24 }, { opacity: 1, y: 0, duration: 0.5, delay: 0.1 });
+      gsap.fromTo('.hero-title', { opacity: 1, y: 32 }, { opacity: 1, y: 0, duration: 0.8, delay: 0.3 });
+      gsap.fromTo('.hero-subtitle', { opacity: 1, y: 24 }, { opacity: 1, y: 0, duration: 0.6, delay: 0.48 });
+      gsap.fromTo('.hero-btn', { opacity: 1, y: 24 }, { opacity: 1, y: 0, duration: 0.55, delay: 0.66, stagger: 0.1 });
+      gsap.fromTo('.hero-btn-artwork', { opacity: 1, y: 24 }, { opacity: 1, y: 0, duration: 0.55, delay: 0.6 });
+      gsap.fromTo('.hero-img', { opacity: 1, y: 18 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', delay: 0.55 });
+
+      // ---- Scroll-reveal for content sections (lifts into place on scroll) ----
+      gsap.utils.toArray('.reveal').forEach((el, i) => {
+        if (el.classList.contains('hero-inner')) return;
+        gsap.to(el, {
+          y: 0,
+          opacity: 1,
+          duration: 0.8 + i * 0.12,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 92%',
+            toggleActions: 'play none none reverse'
+          }
+        });
+      });
+    } catch (e) {
+      // GSAP errored — still show content so the page is never blank
+      ensureVisible();
+    }
+  })();
+  // ---- Header shadow on scroll ----
+  const top = document.getElementById('top');
+  window.addEventListener('scroll', () => {
+    top.classList.toggle('scrolled', window.scrollY > 8);
+  });
+
+  // ---- Lightbox ----
+  const lb = document.getElementById('lightbox');
+  window.openLightbox = function () { lb.classList.add('open'); };
+  window.closeLightbox = function () { lb.classList.remove('open'); };
+  lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+  // ---- Mobile nav ----
+  document.querySelector('.mobile-toggle').addEventListener('click', () => {
+    document.querySelector('.mobile-menu').classList.toggle('hidden');
+  });
+
+  // ---- Rating widget: render stars from the product's rating field ----
+  (function () {
+    const starsEl = document.getElementById('rating-stars');
+    if (!starsEl) return;
+    // Read the interpolated rating value (Gumroad fills this server-side)
+    const ratingText = (document.querySelector('[data-gumroad-field="rating"]') || {}).textContent || '';
+    // Extract the numeric rating (e.g. "4.2" from "4.2 out of 5 stars")
+    const numMatch = ratingText.match(/(\d+(?:\.\d+)?)/);
+    const rating = numMatch ? parseFloat(numMatch[1]) : 0;
+    const starMax = 5;
+    const filled = Math.round(Math.min(rating, starMax));
+    let html = '';
+    for (let i = 1; i <= starMax; i++) {
+      html += `<span class="star ${i <= filled ? 'filled' : ''}" role="img" aria-label="${i} star">★</span>`;
+    }
+    starsEl.innerHTML = html;
+  })();
+</script>
+</body>
+</html>
