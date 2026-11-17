@@ -4,9 +4,8 @@
  *
  * Design rules:
  *  - Loads AFTER script.js. script.js owns the IntersectionObserver reveal for
- *    mid-page sections; GSAP only takes over the hero, the animated widgets
- *    (stat counters + skill rings), the portfolio-card stagger, hero-glow
- *    parallax, and case-study content reveals. Every element GSAP owns gets its
+ *    mid-page sections; GSAP only takes over the hero portrait, the
+ *    portfolio-card stagger, and case-study content reveals. Every element GSAP owns gets its
  *    [data-reveal] attribute stripped
  *    so the CSS reveal rule can't fight the timeline.
  *  - If GSAP is missing (CDN blocked / offline), this file does nothing and the
@@ -51,8 +50,40 @@
   }
 
   /* ---------------------------------------------------------------- *
-   * 1. HERO ENTRANCE
+   * 1. HERO ENTRANCE AND POINTER DEPTH
    * ---------------------------------------------------------------- */
+  function heroPointerMotion(hero, banner) {
+    if (!banner || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+    var light = hero.querySelector('.hero-light');
+    var rotateX = gsap.quickTo(banner, 'rotationX', { duration: 0.75, ease: EASE });
+    var rotateY = gsap.quickTo(banner, 'rotationY', { duration: 0.75, ease: EASE });
+    var lightX = light ? gsap.quickTo(light, 'x', { duration: 1, ease: EASE }) : null;
+    var lightY = light ? gsap.quickTo(light, 'y', { duration: 1, ease: EASE }) : null;
+
+    hero.addEventListener('pointermove', function (event) {
+      var bounds = hero.getBoundingClientRect();
+      var x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      var y = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+      rotateX(-y * 2.2);
+      rotateY(x * 3.2);
+      if (lightX && lightY) {
+        lightX(x * 18);
+        lightY(y * 14);
+      }
+    });
+
+    hero.addEventListener('pointerleave', function () {
+      rotateX(0);
+      rotateY(0);
+      if (lightX && lightY) {
+        lightX(0);
+        lightY(0);
+      }
+    });
+  }
+
   function heroIntro() {
     var hero = document.querySelector('.hero');
     if (!hero) { revealHero(); return; }
@@ -75,8 +106,8 @@
 
     if (banner) {
       tl.fromTo(banner,
-        { autoAlpha: 0, y: 40, scale: 0.97 },
-        { autoAlpha: 1, y: 0, scale: 1, duration: 1.05, clearProps: 'transform' },
+        { autoAlpha: 0, y: 16, rotationY: -14, transformPerspective: 1100, transformOrigin: 'left center' },
+        { autoAlpha: 1, y: 0, rotationY: 0, duration: 1.15, ease: EASE, clearProps: 'transform' },
         0);
     }
     if (content) {
@@ -96,27 +127,9 @@
         { autoAlpha: 1, y: 0, scale: 1, stagger: 0.12, clearProps: 'transform' },
         0.50);
     }
-  }
 
-  /* ---------------------------------------------------------------- *
-   * 2. HERO-GLOW PARALLAX (scroll scrub)
-   * ---------------------------------------------------------------- */
-  function heroParallax() {
-    if (!hasST) return;
-    var glow = document.querySelector('.hero-glow');
-    var hero = document.querySelector('.hero');
-    if (!glow || !hero) return;
-
-    gsap.to(glow, {
-      yPercent: 24,
-      scale: 1.12,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: hero,
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 0.6
-      }
+    tl.eventCallback('onComplete', function () {
+      heroPointerMotion(hero, banner);
     });
   }
 
@@ -309,7 +322,6 @@
   function init() {
     try {
       heroIntro();
-      heroParallax();
       statCounters();
       skillRings();
       portfolioStagger();

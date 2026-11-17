@@ -8,10 +8,16 @@
 
 const header = document.querySelector("[data-header]");
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
+const scrollProgress = document.querySelector(".scroll-progress");
+
+function setNavOpen(isOpen) {
+  header.classList.toggle("nav-active", isOpen);
+  navToggleBtn.classList.toggle("active", isOpen);
+  navToggleBtn.setAttribute("aria-expanded", String(isOpen));
+}
 
 navToggleBtn.addEventListener("click", function () {
-  header.classList.toggle("nav-active");
-  this.classList.toggle("active");
+  setNavOpen(!header.classList.contains("nav-active"));
 });
 
 /**
@@ -22,8 +28,7 @@ const navbarLinks = document.querySelectorAll("[data-nav-link]");
 
 for (let i = 0; i < navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", function () {
-    header.classList.toggle("nav-active");
-    navToggleBtn.classList.toggle("active");
+    setNavOpen(false);
   });
 }
 
@@ -163,107 +168,3 @@ if (spyLinks.length > 0 && spySections.length > 0) {
 }
 
 /* Scroll progress indicator */
-const scrollProgress = document.createElement("div");
-scrollProgress.className = "scroll-progress";
-document.body.appendChild(scrollProgress);
-
-window.addEventListener("scroll", function () {
-  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollPos = window.scrollY;
-  const scrollPercent = (scrollPos / scrollHeight) * 100;
-  scrollProgress.style.width = scrollPercent + "%";
-});
-
-/* Floating Action Button for quick contact */
-const fab = document.createElement("a");
-fab.href = "mailto:Marvilynlion@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Marvilyn%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20potential%20collaboration.";
-fab.className = "fab";
-fab.innerHTML = '<ion-icon name="mail-outline"></ion-icon>';
-document.body.appendChild(fab);
-
-/* Pulse animation for primary buttons */
-const primaryButtons = document.querySelectorAll(".btn-primary.blue");
-primaryButtons.forEach(button => {
-  button.classList.add("btn-pulse");
-});
-
-/* Enhanced navbar active link styling */
-const navLinks = document.querySelectorAll(".navbar-link");
-navLinks.forEach(link => {
-  link.addEventListener("mouseenter", function () {
-    if (!this.classList.contains("active")) {
-      this.style.color = getComputedStyle(document.documentElement).getPropertyValue("--klein-blue");
-    }
-  });
-  link.addEventListener("mouseleave", function () {
-    if (!this.classList.contains("active")) {
-      this.style.color = getComputedStyle(document.documentElement).getPropertyValue("--white");
-    }
-  });
-});
-
-/* Hide header on scroll down, show on scroll up */
-let lastScrollY = window.scrollY;
-let ticking = false;
-
-function onScroll() {
-  const scrollY = window.scrollY;
-  if (scrollY > lastScrollY && scrollY > 100) {
-    // scrolling down past threshold -> hide
-    header.classList.add("header-hidden");
-  } else if (scrollY < lastScrollY) {
-    // scrolling up -> show
-    header.classList.remove("header-hidden");
-  }
-  lastScrollY = scrollY;
-
-  // After scroll ends, ensure header is visible (optional)
-  clearTimeout(window.scrollEndTimer);
-  window.scrollEndTimer = setTimeout(() => {
-    header.classList.remove("header-hidden");
-  }, 150);
-}
-
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      onScroll();
-      ticking = false;
-    });
-    ticking = true;
-  }
-});
-/* Dark Mode Toggle */
-const darkModeToggle = document.querySelector("[data-dark-mode-toggle]");
-if (darkModeToggle) {
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-  
-  // Check for saved user preference or use system preference
-  const getCurrentTheme = () => localStorage.getItem("dark-mode") || 
-                               (prefersDarkScheme.matches ? "dark" : "light");
-  
-  const setTheme = (theme) => {
-    if (theme === "dark") {
-      document.body.classList.add("dark-mode");
-      localStorage.setItem("dark-mode", "dark");
-    } else {
-      document.body.classList.remove("dark-mode");
-      localStorage.setItem("dark-mode", "light");
-    }
-  };
-  
-  // Initialize theme on load
-  setTheme(getCurrentTheme());
-  
-  // Toggle theme when button is clicked
-  darkModeToggle.addEventListener("click", () => {
-    setTheme(getCurrentTheme() === "dark" ? "light" : "dark");
-  });
-  
-  // Listen for system preference changes (optional)
-  prefersDarkScheme.addEventListener("change", (e) => {
-    if (!localStorage.getItem("dark-mode")) {
-      setTheme(e.matches ? "dark" : "light");
-    }
-  });
-}

@@ -13,11 +13,11 @@
 
 ### Sections
 
-- **Home** — hero with photo, stats, and quick intro
-- **About** — background, experience, and certifications
-- **Portfolio** — organizations served
-- **Skills** — core IT and web skills
-- **Contact** — address, email, and phone (form opens a pre-filled email)
+- **Home** — introduction, portrait, and contact shortcuts
+- **About** — background, selected experience, and certifications
+- **Portfolio** — web apps, website work, and IT/data operations
+- **Skills** — core areas of expertise and tools
+- **Contact** — contact form, location, email, and phone
 
 ### Run Locally
 
@@ -41,7 +41,7 @@ Then visit `http://localhost:8000`.
 
 ### Contact
 
-- **Email:** [Marvilynlion@gmail.com](mailto:Marvilynlion@gmail.com)
+- **Email:** [marvilyncalibuso@gmail.com](mailto:marvilyncalibuso@gmail.com)
 - **Location:** Bauang, La Union, Philippines
 
 ### Credits

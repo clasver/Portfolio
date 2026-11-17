@@ -65,12 +65,7 @@
       <a href="#home">
         <h1 class="logo">Marvilyn</h1>
       </a>
-      <!-- Dark mode toggle -->
-      <button class="dark-mode-toggle" aria-label="Toggle Dark Mode" data-dark-mode-toggle>
-        <ion-icon name="moon-outline" class="moon"></ion-icon>
-        <ion-icon name="sunny-outline" class="sunny"></ion-icon>
-      </button>
-      <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" aria-expanded="false" data-nav-toggle-btn>
         <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
         <ion-icon name="close-outline" class="close-icon"></ion-icon>
       </button>
@@ -90,18 +85,15 @@
   <main><article>
 
   <section class="hero" id="home">
+    <div class="hero-light" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-banner" data-reveal>
-        <div class="hero-glow" aria-hidden="true"></div>
         <img src="./assets/images/hero-banner.jpg" width="800" height="864" loading="eager" alt="Marvilyn Calibuso's Photo" class="img-cover">
-        <div class="elem elem-1"><p class="elem-title">2+</p><p class="elem-text">Years in IT Support</p></div>
-        <div class="elem elem-2"><p class="elem-title">5</p><p class="elem-text">Organizations Served</p></div>
-        <div class="elem elem-3"><ion-icon name="trophy"></ion-icon></div>
       </div>
       <div class="hero-content" data-reveal>
         <p class="hero-eyebrow">Hello, I'm</p>
         <h2 class="hero-title"><span class="hero-name">Marvilyn Calibuso</span><span class="hero-role">IT Support &amp; Web Developer</span></h2>
-        <p class="hero-text">I troubleshoot hardware and software, keep networks running, and build with WordPress, Wix, and code — from Bauang, La Union to wherever the work takes me.</p>
+        <p class="hero-text">I help people solve everyday tech problems, keep data organized, and maintain useful, up-to-date websites. Based in Bauang, La Union.</p>
         <div class="btn-group">
           <a href="#contact" class="btn btn-primary blue">Hire Me</a>
           <a href="#about" class="btn btn-outline">About Me</a>
@@ -123,8 +115,8 @@
       <div class="about-content" data-reveal>
         <p class="section-subtitle">I'm an IT Professional</p>
         <h2 class="h2 section-title">I Support Systems That Help People</h2>
-        <p class="section-text">IT support and web development professional based in Bauang, La Union, Philippines. Skilled in troubleshooting hardware and software, network maintenance, data encoding, and content and website operations - with hands-on experience across private firms, LGU offices, and remote teams.</p>
-        <p class="section-text">From automating scripts in Kotlin to managing WordPress and Wix sites, I keep systems running and workflows efficient. Certified in Web Development (NCIII) and Computer System Servicing (NCII), and fluent in English, Iloco, and Tagalog.</p>
+        <p class="section-text">I work across IT support, data operations, and website management. My experience includes troubleshooting hardware and software, maintaining networks, handling records, and publishing content with WordPress and Wix.</p>
+        <p class="section-text">I also build small tools and scripts to make repeatable work easier. I hold national certificates in Web Development (NC III), Computer System Servicing (NC II), and EPAS (NC II), and speak Iloco, Tagalog, and English.</p>
         <div class="language-row" aria-label="Languages">
           <span class="language-tag">Iloco <em>native</em></span>
           <span class="language-tag">Tagalog <em>native</em></span>
@@ -143,7 +135,7 @@
         </ul>
       </div>
       <div class="timeline" data-reveal>
-        <h3 class="h3 timeline-title">Career Timeline</h3>
+        <h3 class="h3 timeline-title">Selected Experience</h3>
         <ol class="timeline-list">
           <li class="timeline-item"><div class="timeline-marker" aria-hidden="true"></div><div class="timeline-card">
             <p class="timeline-period">Apr 2026</p><h4 class="timeline-role">Content &amp; Website Operations Assistant</h4><p class="timeline-org">Goodmedia</p>
@@ -207,34 +199,6 @@
               <p class="project-desc">Client-side CSV and data cleaning toolkit. RFC-compliant parsing, trim, dedup, column picker, and CSV export — powered entirely by the browser.</p>
               <ul class="project-tags"><li>JavaScript</li><li>CSV</li><li>Data Cleaning</li><li>GitHub Pages</li></ul>
               <div class="project-links"><a class="pl-live" href="https://clasver.github.io/cleansheet/" target="_blank" rel="noopener">Live demo ↗</a><a href="https://github.com/clasver/cleansheet" target="_blank" rel="noopener">Source</a></div>
-            </div>
-          </article>
-        </li>
-
-        <!-- Photo Editing -->
-        <li class="portfolio-item" data-category="web" data-reveal>
-          <article class="project-card">
-            <div class="project-thumb is-shot" aria-hidden="true"><img src="assets/images/photoedit-shot.png" alt="Photo editing workflow screenshot" loading="lazy"></div>
-            <div class="project-body">
-              <p class="project-org">Creative Studio</p>
-              <h3 class="h3 project-title">Photo Editing &amp; Retouching Specialist</h3>
-              <p class="project-desc">Professional photo retouching and color correction services for portraits, product photography, and digital media. Skilled in Adobe Photoshop, Lightroom, and Capture One.</p>
-              <ul class="project-tags"><li>Photoshop</li><li>Lightroom</li><li>Color Grading</li><li>Retouching</li></ul>
-              <div class="project-links"><a class="pl-live" href="https://clasver.github.io/photoedit-demo/" target="_blank" rel="noopener">View Sample</a><a href="https://github.com/clasver/photoedit" target="_blank" rel="noopener">Source</a></div>
-            </div>
-          </article>
-        </li>
-
-        <!-- Video Editing -->
-        <li class="portfolio-item" data-category="web" data-reveal>
-          <article class="project-card">
-            <div class="project-thumb is-shot" aria-hidden="true"><img src="assets/images/videdit-shot.png" alt="Video editing timeline screenshot" loading="lazy"></div>
-            <div class="project-body">
-              <p class="project-org">Media Production Co.</p>
-              <h3 class="h3 project-title">Video Editing &amp; Motion Graphics Artist</h3>
-              <p class="project-desc">Video editing and motion graphics specialist with expertise in Adobe Premiere Pro, After Effects, and Final Cut Pro. Experienced in corporate videos, social media content, and broadcast-quality productions.</p>
-              <ul class="project-tags"><li>Premiere Pro</li><li>After Effects</li><li>Motion Graphics</li><li>Video Editing</li></ul>
-              <div class="project-links"><a class="pl-live" href="https://clasver.github.io/videdit-demo/" target="_blank" rel="noopener">View Sample</a><a href="https://github.com/clasver/videdit" target="_blank" rel="noopener">Source</a></div>
             </div>
           </article>
         </li>
@@ -358,18 +322,6 @@
             </div>
           </article>
         </li>
-        <!-- Portfolio -->
-        <li class="portfolio-item" data-category="web" data-reveal>
-          <article class="project-card">
-            <div class="project-thumb" aria-hidden="true"><ion-icon name="code-slash-outline"></ion-icon></div>
-            <div class="project-body">
-              <p class="project-org">Personal Project</p>
-              <h3 class="h3 project-title">Portfolio &amp; Brand Site</h3>
-              <p class="project-desc">Designed, built, and deployed this responsive portfolio on GitHub Pages with vanilla HTML, CSS, and JavaScript — the site you're looking at right now.</p>
-              <ul class="project-tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
-            </div>
-          </article>
-        </li>
         <!-- Halloween Coloring Pages (Gumroad Product) -->
         <li class="portfolio-item" data-category="web" data-reveal>
           <article class="project-card">
@@ -390,57 +342,25 @@
 
   <section class="section skills" id="skills">
     <div class="container">
-      <p class="section-subtitle">My Skills</p>
-      <h2 class="h2 section-title">I Keep My Skills Sharp</h2>
-      <p class="section-text">Troubleshooting, networking, data entry, web operations, and customer support — backed by national certifications and hands-on experience.</p>
-      <div class="stats-counter" data-reveal>
-        <div class="stat-item"><div class="stat-number">95%</div><div class="stat-label">Troubleshooting</div></div>
-        <div class="stat-item"><div class="stat-number">90%</div><div class="stat-label">Networking</div></div>
-        <div class="stat-item"><div class="stat-number">95%</div><div class="stat-label">Data Entry</div></div>
-        <div class="stat-item"><div class="stat-number">85%</div><div class="stat-label">Web Development</div></div>
-        <div class="stat-item"><div class="stat-number">80%</div><div class="stat-label">Programming</div></div>
-        <div class="stat-item"><div class="stat-number">90%</div><div class="stat-label">Customer Service</div></div>
-      </div>
-      <div class="skills-chart" data-reveal>
-        <div class="skill-chart-item"><div class="skill-chart-title">Troubleshooting</div><div class="skill-progress-circle" style="--skill-percent: 95%;"><div class="skill-percent-text">95%</div></div><div class="skill-label">Technical Problem Solving</div></div>
-        <div class="skill-chart-item"><div class="skill-chart-title">Networking</div><div class="skill-progress-circle" style="--skill-percent: 90%;"><div class="skill-percent-text">90%</div></div><div class="skill-label">Network Infrastructure</div></div>
-        <div class="skill-chart-item"><div class="skill-chart-title">Data Entry</div><div class="skill-progress-circle" style="--skill-percent: 95%;"><div class="skill-percent-text">95%</div></div><div class="skill-label">Data Management</div></div>
-        <div class="skill-chart-item"><div class="skill-chart-title">Web Development</div><div class="skill-progress-circle" style="--skill-percent: 85%;"><div class="skill-percent-text">85%</div></div><div class="skill-label">Frontend &amp; Backend</div></div>
-        <div class="skill-chart-item"><div class="skill-chart-title">Programming</div><div class="skill-progress-circle" style="--skill-percent: 80%;"><div class="skill-percent-text">80%</div></div><div class="skill-label">Scripting &amp; Automation</div></div>
-        <div class="skill-chart-item"><div class="skill-chart-title">Customer Service</div><div class="skill-progress-circle" style="--skill-percent: 90%;"><div class="skill-percent-text">90%</div></div><div class="skill-label">Client Relations</div></div>
-      </div>
-      <ul class="tools-list" data-reveal>
-        <li>WordPress</li><li>Wix</li><li>Kotlin</li><li>JavaScript</li><li>AnyDesk</li><li>Google Workspace</li><li>Excel</li><li>Canva</li><li>Windows</li><li>ChatGPT</li>
+      <p class="section-subtitle">Skills</p>
+      <h2 class="h2 section-title">Tools for getting the work done</h2>
+      <p class="section-text">Practical experience across day-to-day IT support, website operations, and data handling.</p>
+      <ul class="expertise-list" data-reveal>
+        <li><h3>IT support</h3><p>Hardware and software troubleshooting, Windows, networking, remote support, and backups.</p></li>
+        <li><h3>Web operations</h3><p>WordPress, Wix, website updates, content publishing, and basic SEO workflows.</p></li>
+        <li><h3>Data and automation</h3><p>Accurate data entry, spreadsheets, reporting, JavaScript, and Kotlin scripting.</p></li>
       </ul>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section testimonials" id="testimonials">
-    <div class="container">
-      <h2 class="h2 section-title">What Clients Say</h2>
-      <div class="testimonial-slider" data-reveal>
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Marvilyn transformed our outdated website into a modern, responsive platform that increased our online engagement by 40%. His attention to detail and technical expertise are exceptional."</p>
-          <div class="testimonial-author"><div class="testimonial-author-img"><ion-icon name="person-circle"></ion-icon></div><div class="testimonial-author-info"><h4 class="testimonial-author-name">John D.</h4><p class="testimonial-author-role">CEO, TechStartup Inc.</p></div></div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Thanks to Marvilyn's IT support, our network downtime decreased by 70%. Hi's reliable, knowledgeable, and always goes the extra mile to ensure our systems run smoothly."</p>
-          <div class="testimonial-author"><div class="testimonial-author-img"><ion-icon name="person-circle"></ion-icon></div><div class="testimonial-author-info"><h4 class="testimonial-author-name">Sarah K.</h4><p class="testimonial-author-role">Operations Manager</p></div></div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Marvilyn's data migration automation saved us countless hours of manual work. His Kotlin scripts were elegant, efficient, and completely error-free."</p>
-          <div class="testimonial-author"><div class="testimonial-author-img"><ion-icon name="person-circle"></ion-icon></div><div class="testimonial-author-info"><h4 class="testimonial-author-name">Michael R.</h4><p class="testimonial-author-role">Data Specialist, Logistics Corp</p></div></div>
-        </div>
-      </div>
+      <ul class="tools-list" data-reveal>
+        <li>WordPress</li><li>Wix</li><li>Kotlin</li><li>JavaScript</li><li>AnyDesk</li><li>Google Workspace</li><li>Excel</li><li>Canva</li><li>Windows</li>
+      </ul>
     </div>
   </section>
 
   <section class="section contact" id="contact">
     <div class="container">
       <div class="contact-card" data-reveal>
-        <p class="card-subtitle">Don't be shy</p>
-        <h2 class="h2 section-title">Drop Me a Line</h2>
+        <p class="card-subtitle">Get in touch</p>
+        <h2 class="h2 section-title">Let's talk about how I can help</h2>
         <div class="wrapper">
           <form id="contact-form" class="contact-form">
             <input type="text" name="name" placeholder="Name" required class="contact-input">
@@ -449,7 +369,7 @@
             <button type="submit" class="btn-submit">Submit Message</button>
           </form>
           <ul class="contact-list">
-            <li class="contact-item"><div class="contact-icon"><ion-icon name="location"></ion-icon></div><div><h3 class="contact-item-title">Address</h3><address class="contact-item-link">Cabalayangan, Bauang, La Union 2501, Philippines</address></div></li>
+            <li class="contact-item"><div class="contact-icon"><ion-icon name="location"></ion-icon></div><div><h3 class="contact-item-title">Location</h3><address class="contact-item-link">Bauang, La Union, Philippines</address></div></li>
             <li class="contact-item"><div class="contact-icon"><ion-icon name="mail"></ion-icon></div><div><h3 class="contact-item-title">Email</h3><a href="mailto:marvilyncalibuso@gmail.com" class="contact-item-link">marvilyncalibuso@gmail.com</a></div></li>
             <li class="contact-item"><div class="contact-icon"><ion-icon name="call"></ion-icon></div><div><h3 class="contact-item-title">Phone</h3><a href="tel:+639271456945" class="contact-item-link">+63 927 145 6945</a></div></li>
           </ul>
