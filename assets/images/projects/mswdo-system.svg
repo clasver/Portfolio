@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280">
+  <rect width="640" height="280" fill="#eaf2f1"/>
+  <circle cx="72" cy="26" r="105" fill="#d8e9e5"/>
+  <rect x="28" y="20" width="584" height="240" rx="18" fill="#fff" stroke="#dce7e6"/>
+  <path d="M28 59h584" stroke="#e4eceb"/>
+  <circle cx="50" cy="40" r="4" fill="#d88a69"/><circle cx="65" cy="40" r="4" fill="#e6c06e"/><circle cx="80" cy="40" r="4" fill="#77aaa1"/>
+  <text x="102" y="44" fill="#526574" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">ASSISTANCE CASE MANAGEMENT</text>
+  <rect x="48" y="76" width="108" height="164" rx="10" fill="#176b68"/>
+  <circle cx="75" cy="101" r="11" fill="#e8f3f1"/><path d="M67 102h16m-8-8v16" stroke="#176b68" stroke-width="2"/>
+  <path d="M66 131h70M66 157h70M66 183h70M66 209h55" stroke="#77aaa1" stroke-width="5" stroke-linecap="round"/>
+  <rect x="172" y="76" width="420" height="50" rx="10" fill="#f5f8f7"/>
+  <text x="192" y="98" fill="#718096" font-family="Arial,sans-serif" font-size="9" font-weight="700">REQUESTS</text>
+  <text x="192" y="117" fill="#172b3a" font-family="Arial,sans-serif" font-size="15" font-weight="700">Intake</text>
+  <path d="M271 87v28" stroke="#e0e9e8"/>
+  <text x="291" y="98" fill="#718096" font-family="Arial,sans-serif" font-size="9" font-weight="700">UNDER REVIEW</text>
+  <text x="291" y="117" fill="#172b3a" font-family="Arial,sans-serif" font-size="15" font-weight="700">Casework</text>
+  <path d="M372 87v28" stroke="#e0e9e8"/>
+  <text x="392" y="98" fill="#718096" font-family="Arial,sans-serif" font-size="9" font-weight="700">DECISIONS</text>
+  <text x="392" y="117" fill="#172b3a" font-family="Arial,sans-serif" font-size="15" font-weight="700">Workflow</text>
+  <rect x="172" y="139" width="420" height="101" rx="10" fill="#fff" stroke="#e3ebea"/>
+  <text x="190" y="160" fill="#526574" font-family="Arial,sans-serif" font-size="10" font-weight="700">APPLICATION WORKFLOW</text>
+  <path d="M188 169h388M188 192h388M188 215h388" stroke="#edf1f0"/>
+  <circle cx="202" cy="181" r="5" fill="#dcefeb"/><text x="215" y="185" fill="#526574" font-family="Arial,sans-serif" font-size="10">Medical assistance</text><text x="385" y="185" fill="#718096" font-family="Arial,sans-serif" font-size="9">CASE REVIEW</text><rect x="497" y="174" width="61" height="14" rx="7" fill="#e6f3ef"/><text x="527" y="184" fill="#176b68" font-family="Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle">APPROVED</text>
+  <circle cx="202" cy="204" r="5" fill="#f3e8d3"/><text x="215" y="208" fill="#526574" font-family="Arial,sans-serif" font-size="10">Financial assistance</text><text x="385" y="208" fill="#718096" font-family="Arial,sans-serif" font-size="9">DOCUMENTS</text><rect x="497" y="197" width="61" height="14" rx="7" fill="#f7f0e2"/><text x="527" y="207" fill="#9c7737" font-family="Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle">IN REVIEW</text>
+  <circle cx="202" cy="227" r="5" fill="#dcefeb"/><text x="215" y="231" fill="#526574" font-family="Arial,sans-serif" font-size="10">Medical assistance</text><text x="385" y="231" fill="#718096" font-family="Arial,sans-serif" font-size="9">CASE REVIEW</text><rect x="497" y="220" width="61" height="14" rx="7" fill="#e6f3ef"/><text x="527" y="230" fill="#176b68" font-family="Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle">APPROVED</text>
+</svg>

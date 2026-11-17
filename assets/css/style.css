@@ -1849,21 +1849,23 @@ textarea.contact-input {
 
 .project-thumb ion-icon { position: relative; z-index: 1; }
 
-/* screenshot thumbs for live-app cards */
-.project-thumb.is-shot {
+/* image previews for live apps and project illustrations */
+.project-thumb.has-image {
   display: block;
   padding: 0;
   overflow: hidden;
 }
-.project-thumb.is-shot::after { display: none; }
-.project-thumb.is-shot img {
+.project-thumb.has-image::after { display: none; }
+.project-thumb.has-image img {
   width: 100%;
   height: 100%;
-  min-height: 130px;
+  min-height: 0;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   display: block;
+  transition: transform 0.5s ease;
 }
+.project-thumb.has-image.is-shot img { object-position: top; }
 
 /* live-app link pills */
 .project-links {
@@ -2097,16 +2099,14 @@ button:focus-visible,
 .stat-number,
 .skill-percent-text { font-variant-numeric: tabular-nums; }
 
-.project-thumb.is-shot img { transition: transform 0.5s ease; }
-
-.project-card:is(:hover, :focus-within) .project-thumb.is-shot img {
+.project-card:is(:hover, :focus-within) .project-thumb.has-image img {
   transform: scale(1.045);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .stat-item:is(:hover, :focus-within) { transform: none; }
-  .project-thumb.is-shot img { transition: none; }
-  .project-card:is(:hover, :focus-within) .project-thumb.is-shot img { transform: none; }
+  .project-thumb.has-image img { transition: none; }
+  .project-card:is(:hover, :focus-within) .project-thumb.has-image img { transform: none; }
 }
 
 @media (scripting: enabled) {
@@ -2593,6 +2593,10 @@ body {
 }
 
 .project-thumb::after { display: none; }
+.project-thumb.has-image {
+  min-height: 0;
+  aspect-ratio: 2.3 / 1;
+}
 .project-body { position: relative; z-index: 1; padding: 2.2rem; }
 .project-org { color: var(--klein-blue); letter-spacing: 0.06em; }
 .project-title { color: #172b3a; font-family: var(--ff-open-sans); font-size: 2rem; }

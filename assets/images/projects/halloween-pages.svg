@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280">
+  <rect width="640" height="280" fill="#eee9ef"/>
+  <circle cx="557" cy="23" r="108" fill="#e1d7e6"/>
+  <rect x="28" y="20" width="584" height="240" rx="18" fill="#fffdfb" stroke="#e5dce7"/>
+  <path d="M28 59h584" stroke="#eee7ef"/>
+  <circle cx="50" cy="40" r="4" fill="#c97b66"/><circle cx="65" cy="40" r="4" fill="#dbb86e"/><circle cx="80" cy="40" r="4" fill="#91839d"/>
+  <text x="102" y="44" fill="#6e617a" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">HALLOWEEN COLORING PAGES</text>
+  <rect x="49" y="77" width="166" height="164" rx="10" fill="#fff" stroke="#e6dfe7"/>
+  <rect x="235" y="77" width="166" height="164" rx="10" fill="#fff" stroke="#e6dfe7"/>
+  <rect x="421" y="77" width="166" height="164" rx="10" fill="#fff" stroke="#e6dfe7"/>
+  <path d="M105 151c-13 6-17 21-13 38 4 18 17 29 38 29s34-11 38-29c4-17 0-32-13-38-4-11-13-17-25-17s-21 6-25 17Z" fill="none" stroke="#775f7f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M118 145c-1-10 4-15 12-18 8 3 13 8 12 18M119 178h2m19 0h2m-19 17 9 5 9-5" fill="none" stroke="#775f7f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M287 148c-13-3-24 6-28 20-5 17-1 35 13 45 6-10 10-10 16 0 6-10 10-10 16 0 14-10 18-28 13-45-4-14-15-23-28-20-2-16-4-23-7-29-3 6-5 13-7 29Z" fill="none" stroke="#b77b57" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M283 177h2m15 0h2m-13 18 5 3 5-3" fill="none" stroke="#b77b57" stroke-width="3" stroke-linecap="round"/>
+  <path d="m504 112 8 19 20 2-15 13 5 20-18-11-18 11 5-20-15-13 20-2Z" fill="none" stroke="#8c7c97" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M459 194c12-12 21-18 33-18 14 0 25 8 35 22m-59-2c10 0 18 6 24 13m26-21c8-7 17-10 27-10" fill="none" stroke="#c99d66" stroke-width="3" stroke-linecap="round"/>
+  <text x="132" y="232" fill="#94889a" font-family="Arial,sans-serif" font-size="8" letter-spacing="1" text-anchor="middle">GHOST</text>
+  <text x="318" y="232" fill="#94889a" font-family="Arial,sans-serif" font-size="8" letter-spacing="1" text-anchor="middle">PUMPKIN</text>
+  <text x="504" y="232" fill="#94889a" font-family="Arial,sans-serif" font-size="8" letter-spacing="1" text-anchor="middle">NIGHT SKY</text>
+</svg>

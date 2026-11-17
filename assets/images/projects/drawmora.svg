@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280">
+  <rect width="640" height="280" fill="#f2eee5"/>
+  <circle cx="568" cy="28" r="98" fill="#e8dfce"/>
+  <rect x="28" y="20" width="584" height="240" rx="18" fill="#fffdfa" stroke="#e5dfd3"/>
+  <path d="M28 59h584" stroke="#eee8dd"/>
+  <circle cx="50" cy="40" r="4" fill="#ce8768"/><circle cx="65" cy="40" r="4" fill="#d8b15f"/><circle cx="80" cy="40" r="4" fill="#85a89b"/>
+  <text x="102" y="44" fill="#6c6455" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">DRAWMORA • LEARN TO DRAW</text>
+  <rect x="48" y="77" width="318" height="164" rx="11" fill="#fbf8f0"/>
+  <path d="M70 215h274M70 117h274M70 150h274M70 183h274" stroke="#eee7d9" stroke-width="1"/>
+  <path d="M127 187c-15-16-19-40-7-57 12-17 36-20 52-9 15 11 18 34 8 51-9 17-34 25-53 15Z" fill="none" stroke="#3d665c" stroke-width="3"/>
+  <path d="M132 177c10-20 22-34 38-44m-27 40c-5-11-14-19-26-23m25 15c11 3 21 10 28 20" fill="none" stroke="#3d665c" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M248 120c22 8 31 25 29 44-2 21-17 34-37 33-19-1-32-14-31-34 1-20 16-38 39-43Z" fill="none" stroke="#c87959" stroke-width="3"/>
+  <path d="M226 172c13-19 27-32 44-41m-37 35c10 2 20 9 27 18" fill="none" stroke="#c87959" stroke-width="2.4" stroke-linecap="round"/>
+  <rect x="383" y="77" width="209" height="164" rx="11" fill="#f7f4ec"/>
+  <text x="403" y="102" fill="#6c6455" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">A SIMPLE LEARNING PATH</text>
+  <circle cx="414" cy="129" r="10" fill="#dfe9df"/><text x="414" y="133" fill="#3d665c" font-family="Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle">1</text>
+  <text x="434" y="133" fill="#514c42" font-family="Arial,sans-serif" font-size="11">Start with basic shapes</text>
+  <circle cx="414" cy="162" r="10" fill="#f1e4d7"/><text x="414" y="166" fill="#ad7259" font-family="Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle">2</text>
+  <text x="434" y="166" fill="#514c42" font-family="Arial,sans-serif" font-size="11">Build the main outline</text>
+  <circle cx="414" cy="195" r="10" fill="#e1eadd"/><text x="414" y="199" fill="#3d665c" font-family="Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle">3</text>
+  <text x="434" y="199" fill="#514c42" font-family="Arial,sans-serif" font-size="11">Add detail and practice</text>
+  <path d="m532 222 34-48 11 8-34 48-15 5Z" fill="#d5a56a" stroke="#8f694a" stroke-width="1.5"/>
+  <path d="m532 222 15-5-11 16Z" fill="#ead8b8"/>
+</svg>
