@@ -32,7 +32,69 @@ for (let i = 0; i < navbarLinks.length; i++) {
   });
 }
 
+const localClock = document.querySelector("[data-local-clock]");
 
+if (localClock) {
+  const hourHand = localClock.querySelector("[data-clock-hour]");
+  const minuteHand = localClock.querySelector("[data-clock-minute]");
+  const secondHand = localClock.querySelector("[data-clock-second]");
+  const clockTime = localClock.querySelector("[data-clock-time]");
+  const clockDate = localClock.querySelector("[data-clock-date]");
+  const timeZone = "Asia/Manila";
+  const timePartsFormatter = new Intl.DateTimeFormat("en-GB", {
+    timeZone,
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hourCycle: "h23"
+  });
+  const timeFormatter = new Intl.DateTimeFormat("en-PH", {
+    timeZone,
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true
+  });
+  const dateFormatter = new Intl.DateTimeFormat("en-PH", {
+    timeZone,
+    weekday: "long",
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  });
+  const startedAt = new Date();
+  const initialTime = timePartsFormatter.formatToParts(startedAt).reduce(function (parts, part) {
+    if (part.type !== "literal") parts[part.type] = Number(part.value);
+    return parts;
+  }, {});
+  const startingSeconds = initialTime.hour * 3600 + initialTime.minute * 60 + initialTime.second;
+  const startTimestamp = startedAt.getTime();
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function updateClockHands() {
+    const elapsedSeconds = (startingSeconds + (Date.now() - startTimestamp) / 1000) % 43200;
+    hourHand.style.transform = "translateX(-50%) rotate(" + elapsedSeconds / 120 + "deg)";
+    minuteHand.style.transform = "translateX(-50%) rotate(" + (elapsedSeconds % 3600) / 10 + "deg)";
+    secondHand.style.transform = "translateX(-50%) rotate(" + (elapsedSeconds % 60) * 6 + "deg)";
+
+    if (!prefersReducedMotion) window.requestAnimationFrame(updateClockHands);
+  }
+
+  function updateClockReadout() {
+    const now = new Date();
+    clockTime.textContent = timeFormatter.format(now);
+    clockTime.dateTime = now.toISOString();
+    clockDate.textContent = dateFormatter.format(now);
+  }
+
+  updateClockHands();
+  updateClockReadout();
+
+  if (prefersReducedMotion) {
+    window.setInterval(updateClockHands, 1000);
+  }
+  window.setInterval(updateClockReadout, 1000);
+}
 
 
 
@@ -117,6 +179,19 @@ filterButtons.forEach(function (button) {
     });
   });
 });
+
+const hasFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+const allowsMotion = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (hasFinePointer && allowsMotion) {
+  document.querySelectorAll(".project-card").forEach(function (card) {
+    card.addEventListener("pointermove", function (event) {
+      const bounds = card.getBoundingClientRect();
+      card.style.setProperty("--pointer-x", (event.clientX - bounds.left) + "px");
+      card.style.setProperty("--pointer-y", (event.clientY - bounds.top) + "px");
+    });
+  });
+}
 
 /* Scroll-reveal on view */
 const revealElements = document.querySelectorAll("[data-reveal]");
