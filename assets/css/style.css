@@ -248,7 +248,7 @@ body {
   left: 0;
   right: 0;
   height: 50px;
-  background: linear-gradient(90deg, #ff00cc, #3333ff, #ff00cc);
+  background: linear-gradient(90deg, #ff0000, #3333ff, #ff0000);
   background-size: 200% 200%;
   animation: gradientShift 5s ease infinite;
   padding: 0 1rem;
