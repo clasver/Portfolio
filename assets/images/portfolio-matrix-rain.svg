@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 720 900">
+  <g font-family="Consolas, 'Courier New', monospace" font-size="16" font-weight="600">
+    <g fill="#79b8ff">
+      <text x="54" y="46" opacity="0.34"><tspan>1</tspan><tspan x="54" dy="28">0</tspan><tspan x="54" dy="28">1</tspan><tspan x="54" dy="28">1</tspan><tspan x="54" dy="28">0</tspan><tspan x="54" dy="28">0</tspan><tspan x="54" dy="28">1</tspan></text>
+      <text x="176" y="196" opacity="0.28"><tspan>0</tspan><tspan x="176" dy="28">1</tspan><tspan x="176" dy="28">0</tspan><tspan x="176" dy="28">0</tspan><tspan x="176" dy="28">1</tspan><tspan x="176" dy="28">1</tspan><tspan x="176" dy="28">0</tspan><tspan x="176" dy="28">1</tspan></text>
+      <text x="314" y="86" opacity="0.24"><tspan>1</tspan><tspan x="314" dy="28">1</tspan><tspan x="314" dy="28">0</tspan><tspan x="314" dy="28">1</tspan><tspan x="314" dy="28">0</tspan><tspan x="314" dy="28">0</tspan></text>
+      <text x="458" y="292" opacity="0.3"><tspan>0</tspan><tspan x="458" dy="28">1</tspan><tspan x="458" dy="28">1</tspan><tspan x="458" dy="28">0</tspan><tspan x="458" dy="28">0</tspan><tspan x="458" dy="28">1</tspan><tspan x="458" dy="28">0</tspan></text>
+      <text x="626" y="138" opacity="0.25"><tspan>1</tspan><tspan x="626" dy="28">0</tspan><tspan x="626" dy="28">0</tspan><tspan x="626" dy="28">1</tspan><tspan x="626" dy="28">1</tspan><tspan x="626" dy="28">0</tspan></text>
+    </g>
+    <g fill="#ff7186">
+      <text x="112" y="454" opacity="0.32"><tspan>0</tspan><tspan x="112" dy="28">1</tspan><tspan x="112" dy="28">1</tspan><tspan x="112" dy="28">0</tspan><tspan x="112" dy="28">1</tspan><tspan x="112" dy="28">0</tspan><tspan x="112" dy="28">0</tspan></text>
+      <text x="246" y="570" opacity="0.22"><tspan>1</tspan><tspan x="246" dy="28">0</tspan><tspan x="246" dy="28">1</tspan><tspan x="246" dy="28">0</tspan><tspan x="246" dy="28">0</tspan><tspan x="246" dy="28">1</tspan></text>
+      <text x="386" y="426" opacity="0.28"><tspan>0</tspan><tspan x="386" dy="28">0</tspan><tspan x="386" dy="28">1</tspan><tspan x="386" dy="28">1</tspan><tspan x="386" dy="28">0</tspan><tspan x="386" dy="28">1</tspan><tspan x="386" dy="28">0</tspan></text>
+      <text x="548" y="618" opacity="0.3"><tspan>1</tspan><tspan x="548" dy="28">1</tspan><tspan x="548" dy="28">0</tspan><tspan x="548" dy="28">0</tspan><tspan x="548" dy="28">1</tspan><tspan x="548" dy="28">0</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="matrix-surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#0a1c34"/>
+      <stop offset="1" stop-color="#102747"/>
+    </linearGradient>
+    <radialGradient id="matrix-glow" cx="54%" cy="48%" r="68%">
+      <stop offset="0" stop-color="#174f91" stop-opacity="0.3"/>
+      <stop offset="0.62" stop-color="#6b2947" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#0a1c34" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="circuit-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#79b8ff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#matrix-surface)"/>
+  <rect width="1600" height="900" fill="url(#circuit-grid)"/>
+  <rect width="1600" height="900" fill="url(#matrix-glow)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M110 0v236h54v118" stroke="#579eff" stroke-opacity="0.24" stroke-width="2"/>
+    <path d="M300 0v122h45v228" stroke="#579eff" stroke-opacity="0.16" stroke-width="2"/>
+    <path d="M522 0v178h-38v188" stroke="#ff6b81" stroke-opacity="0.16" stroke-width="2"/>
+    <path d="M1300 0v118h-42v198" stroke="#579eff" stroke-opacity="0.15" stroke-width="2"/>
+    <path d="M1472 0v248h-48v124" stroke="#ff6b81" stroke-opacity="0.22" stroke-width="2"/>
+    <path d="M1550 0v410" stroke="#579eff" stroke-opacity="0.15" stroke-width="2"/>
+  </g>
+  <g fill="#79b8ff" font-family="Consolas, 'Courier New', monospace" font-size="16" font-weight="600">
+    <text x="84" y="58" opacity="0.34"><tspan>01</tspan><tspan x="84" dy="25" opacity="0.35">10</tspan><tspan x="84" dy="25" opacity="0.22">11</tspan><tspan x="84" dy="25" opacity="0.4">00</tspan><tspan x="84" dy="25" opacity="0.18">01</tspan><tspan x="84" dy="25" opacity="0.3">10</tspan><tspan x="84" dy="25" opacity="0.2">01</tspan></text>
+    <text x="272" y="126" opacity="0.2"><tspan>10</tspan><tspan x="272" dy="25" opacity="0.42">01</tspan><tspan x="272" dy="25" opacity="0.2">00</tspan><tspan x="272" dy="25" opacity="0.34">11</tspan><tspan x="272" dy="25" opacity="0.16">01</tspan><tspan x="272" dy="25" opacity="0.38">10</tspan></text>
+    <text x="490" y="72" fill="#ff7186" opacity="0.14"><tspan>11</tspan><tspan x="490" dy="25" opacity="0.3">00</tspan><tspan x="490" dy="25" opacity="0.18">01</tspan><tspan x="490" dy="25" opacity="0.36">10</tspan><tspan x="490" dy="25" opacity="0.2">11</tspan><tspan x="490" dy="25" opacity="0.3">01</tspan><tspan x="490" dy="25" opacity="0.14">00</tspan></text>
+    <text x="690" y="194" opacity="0.13"><tspan>01</tspan><tspan x="690" dy="25" opacity="0.25">11</tspan><tspan x="690" dy="25" opacity="0.14">10</tspan><tspan x="690" dy="25" opacity="0.28">00</tspan><tspan x="690" dy="25" opacity="0.18">01</tspan></text>
+    <text x="930" y="94" opacity="0.14"><tspan>10</tspan><tspan x="930" dy="25" opacity="0.3">01</tspan><tspan x="930" dy="25" opacity="0.18">11</tspan><tspan x="930" dy="25" opacity="0.36">00</tspan><tspan x="930" dy="25" opacity="0.2">10</tspan><tspan x="930" dy="25" opacity="0.34">01</tspan></text>
+    <text x="1240" y="52" fill="#ff7186" opacity="0.2"><tspan>01</tspan><tspan x="1240" dy="25" opacity="0.38">11</tspan><tspan x="1240" dy="25" opacity="0.18">00</tspan><tspan x="1240" dy="25" opacity="0.32">10</tspan><tspan x="1240" dy="25" opacity="0.14">01</tspan><tspan x="1240" dy="25" opacity="0.4">11</tspan><tspan x="1240" dy="25" opacity="0.2">10</tspan></text>
+    <text x="1410" y="138" opacity="0.3"><tspan>10</tspan><tspan x="1410" dy="25" opacity="0.2">00</tspan><tspan x="1410" dy="25" opacity="0.4">01</tspan><tspan x="1410" dy="25" opacity="0.18">11</tspan><tspan x="1410" dy="25" opacity="0.34">10</tspan><tspan x="1410" dy="25" opacity="0.2">01</tspan></text>
+    <text x="1528" y="80" fill="#ff7186" opacity="0.18"><tspan>00</tspan><tspan x="1528" dy="25" opacity="0.36">10</tspan><tspan x="1528" dy="25" opacity="0.2">01</tspan><tspan x="1528" dy="25" opacity="0.38">11</tspan><tspan x="1528" dy="25" opacity="0.16">00</tspan><tspan x="1528" dy="25" opacity="0.3">10</tspan></text>
+  </g>
+  <g fill="#79b8ff">
+    <circle cx="110" cy="236" r="4" opacity="0.42"/>
+    <circle cx="345" cy="122" r="4" fill="#ff7186" opacity="0.34"/>
+    <circle cx="484" cy="178" r="4" opacity="0.26"/>
+    <circle cx="1258" cy="118" r="4" opacity="0.3"/>
+    <circle cx="1424" cy="248" r="4" fill="#ff7186" opacity="0.42"/>
+  </g>
+</svg>
